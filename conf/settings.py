@@ -105,3 +105,5 @@ PIPELINE_COMPILERS = (
 )
 
 PIPELINE_LESS_BINARY = '/usr/bin/lessc'
+
+STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
