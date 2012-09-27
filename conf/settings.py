@@ -80,6 +80,7 @@ INSTALLED_APPS = (
     'statirator.core',
     'statirator.blog',
     'statirator.pages',
+    'pipline',
 )
 
 MEDUSA_RENDERER_CLASS = "django_medusa.renderers.DiskStaticSiteRenderer"
@@ -95,3 +96,12 @@ POSTS_IN_INDEX = 2
 # disqus settings
 DISQUS_API_KEY = ''
 DISQUS_WEBSITE_SHORTNAME = ''
+
+# django-pipline settings
+PIPELINE_YUI_BINARY = '/usr/local/bin/yuicompressor.sh'
+
+PIPELINE_COMPILERS = (
+    'pipeline.compilers.less.LessCompiler',
+)
+
+PIPELINE_LESS_BINARY = '/usr/bin/lessc'
