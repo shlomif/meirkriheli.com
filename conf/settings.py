@@ -87,7 +87,7 @@ MEDUSA_MULTITHREAD = False
 MEDUSA_DEPLOY_DIR = BUILD_DIR
 
 # Set your Analytics site id in here to enable analytics in pages
-GOOGLE_ANALYTICS_ID = ''
+GOOGLE_ANALYTICS_ID = 'UA-26475861-1'
 
 # How many posts to show on the index page
 POSTS_IN_INDEX = 2
