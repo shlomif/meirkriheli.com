@@ -80,7 +80,7 @@ INSTALLED_APPS = (
     'statirator.core',
     'statirator.blog',
     'statirator.pages',
-    'pipline',
+    'pipeline',
 )
 
 MEDUSA_RENDERER_CLASS = "django_medusa.renderers.DiskStaticSiteRenderer"
@@ -107,3 +107,24 @@ PIPELINE_COMPILERS = (
 PIPELINE_LESS_BINARY = '/usr/bin/lessc'
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
+
+PIPELINE_CSS = {
+    'meir': {
+        'source_filenames': (
+            'css/normalize.css',
+            'css/normalize_rtl.css',
+            'css/main.css',
+        ),
+        'output_filename': 'css/meir.css',
+    }
+}
+
+PIPELINE_JS = {
+    'bundle': {
+        'source_filenames': (
+            'js/main.js',
+            'js/plugins.js',
+        ),
+        'output_filename': 'js/bundle.js',
+    }
+}
