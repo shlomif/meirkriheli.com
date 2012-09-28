@@ -1,2 +1,3 @@
 *.pyc
 build/*
+static/css/theme.css
