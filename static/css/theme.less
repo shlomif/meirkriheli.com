@@ -193,7 +193,7 @@
   .clearfix;
   .inner-shadow(0, 5px, 5px, 0.3);
   .license {
-    width:60%; float:left;
+    float:left;
     html[dir=rtl] & { float:right  }
     .accentize(@base3);
     color: @base3;
@@ -206,7 +206,11 @@
     }
   }
   .html5 {
-    width: 40%; float:right; text-align: right;
+    float:right; text-align: right;
     html[dir=rtl] & { float:left; text-align:left  }
   }
+}
+
+@media screen and (max-width: 799px) {
+  .license span {display: none}
 }
