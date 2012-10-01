@@ -5,6 +5,62 @@
 {% block description %}{% trans "About Meir Kriheli" %}{% endblock %}
 
 {% block content %}
-    Bla bla
+  <h1>{% trans "About" %}</h1>
+{% if LANGUAGE_CODE == "he" %}
+  <p>שמי מאיר קריחלי, פרילאנסר מנוסה, מפתח תוכנה, מנהל מערכות ופעיל קוד פתוח.</p>
+  <p>לפני שהחלטתי לעמוד לבד על רגלי, הייתי שותף באמ.קיי.סופט מערכות במשך שש עשרה
+  שנים  שם עסקתי בפיתוח תוכנה הן בצד השרת והן בצד הלקוח, פיתוח יישומי ווב ומתן
+  שירותים לארגונים, כולל הקמת שרתים תחזוקה וייעוץ.</p>
+  <h2>פיתוח</h2>
+  <p>הפיתוח כלל עבודה במגוון שפות, כלים ובסיסי נתונים בחלונות ובלינוקס. כיום רוב
+  הפיתוח בצד השרת מתבצע בפייתון (השפה החביבה עלי) ועל לינוקס. כמו כן הנני בעל ניסיון בפיתוח
+  בצד הדפדפן ויישומי לקוח עשירים.</p>
+  <h2>תוכנה חופשית וקוד פתוח</h2>
+  <p>אני משתמש ותומך בתוכנה חופשית וקוד פתוח, החל בניסיון בהתקנה, תצורה ותחזוקה של
+  שרתים מבוססי לינוקס, היכרות ושימוש עם מגוון רחב של הפצות וסביבות עבודה
+  וכלה בשימוש בלינוקס בתור מערכת ההפעלה שלי במשך מספר רב של
+  שנים.</p>
+  <p>יחד עם יהודה דרורי, אני הבעלים, תומך ומנהל של <a
+      href="http://whatsup.org.il">Whatsup, אתר חדשות ותמיכה אודות לינוקס וקוד
+      פתוח בעברית</a> ואף זכיתי על כך <a
+      href="http://wiki.hamakor.org.il/index.php/%D7%A4%D7%A8%D7%A1_%D7%94%D7%9E%D7%A7%D7%95%D7%A8#.D7.AA.D7.A8.D7.95.D7.9E.D7.94_.D7.9C.D7.A7.D7.95.D7.93_.D7.94.D7.A4.D7.AA.D7.95.D7.97_.D7.95.D7.94.D7.AA.D7.9B.D7.A0.D7.94_.D7.94.D7.97.D7.95.D7.A4.D7.A9.D7.99.D7.AA_.D7.91.D7.90.D7.A8.D7.A5">בפרס
+      עמותת &quot;המקור&quot; לשנת 2008</a>.</p>
+  <h2>דו-כיווניות</h2>
+  <p>בעל ניסיון רב בתמיכה והתאמת יישומים לעבודה ב<a href="http://he.wikipedia.org/wiki/%D7%90%D7%9C%D7%92%D7%95%D7%A8%D7%99%D7%AA%D7%9D_%D7%93%D7%95-%D7%9B%D7%99%D7%95%D7%95%D7%A0%D7%99%D7%95%D7%AA_%D7%A9%D7%9C_%D7%99%D7%95%D7%A0%D7%99%D7%A7%D7%95%D7%93">דו-כיווניות</a>, החל מרכיבי דלפי
+  שונים בעבר וכלה בתשתיות ורכיבי ווב בהווה. דוגמאות אחרונות כוללות <a href="http://whatsup.org.il/article/5257">התאמת ממשק
+      הניהול של Django ותגים לדו-כיווניות</a> והוספת <a href="https://github.com/MeirKriheli/ExtJS-RTL">תמיכה בדו-כיווניות לענף 3 של ספריית
+  הרכיבים Ext JS</a>.</p>
+{% endif %}
+{% if LANGUAGE_CODE == "en" %}
+  <p>My name is Meir Kriheli, an experienced freelancer, software developer,
+  system administrator and open source activist.</p>
+  <p>Before going solo, I've been a partner at MKsoft systems for 16 years,
+  doing software development (backend and frontend), web application development
+  and services to organizations, including servers setup, maintenance and
+  consulting.</p>
+  <h2>Development</h2>
+  <p>Worked with various programming languages, tools and database on
+  MS windows and Linux. These days Python and Linux are my preferred backend language
+  and OS (respectively). I'm also an experienced frontend developer.</p>
+  <h2>Free Software and Open Source</h2>
+  <p>I use and advocate FLOSS, including Installation, configuration and
+  maintenance of Linux servers, experience with many distributions and desktop
+  environments. Been using Linux as my main (and only) OS as far as I can
+  remember.</p>
+  <p>With Yehuda Drori, I'm the owner, help desk and manager of
+  <a href="http://whatsup.org.il">Whatsup, Linux and FLOSS Hebrew news and
+  support forums</a>, awarding me <a
+  href="http://wiki.hamakor.org.il/index.php/%D7%A4%D7%A8%D7%A1_%D7%94%D7%9E%D7%A7%D7%95%D7%A8#.D7.AA.D7.A8.D7.95.D7.9E.D7.94_.D7.9C.D7.A7.D7.95.D7.93_.D7.94.D7.A4.D7.AA.D7.95.D7.97_.D7.95.D7.94.D7.AA.D7.9B.D7.A0.D7.94_.D7.94.D7.97.D7.95.D7.A4.D7.A9.D7.99.D7.AA_.D7.91.D7.90.D7.A8.D7.A5">&quot;Hamakor&quot;
+  society's prize for the year 2008</a>.</p>
+  <h2>Bi-directional text</h2>
+  <p>Experienced with supporting and adapting applications and frameworks for
+  <a href="http://en.wikipedia.org/wiki/Bi-directional_text">BiDi text
+    support</a>. Staring with variou Delphi components in the past and ending
+    with web frameworks and toolkits, e.g. <a
+      href="http://whatsup.org.il/article/5257">adapting Django's admin interface
+      and adding BiDi related template tags</a> and providing
+    <a href="https://github.com/MeirKriheli/ExtJS-RTL">BiDi support to Ext JS
+      3.x</a>.</p>
+{% endif %}
 {% endblock %}
 
