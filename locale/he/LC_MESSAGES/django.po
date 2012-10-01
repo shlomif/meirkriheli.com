@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-01 03:41+0200\n"
-"PO-Revision-Date: 2012-10-01 03:43+0200\n"
+"POT-Creation-Date: 2012-10-01 20:18+0200\n"
+"PO-Revision-Date: 2012-10-01 20:20+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -25,6 +25,14 @@ msgstr ""
 msgid "Hebrew"
 msgstr ""
 
+#: pages/about.html:3
+msgid "About"
+msgstr "אודות"
+
+#: pages/about.html:5
+msgid "About Meir Kriheli"
+msgstr "אודות מאיר קריחלי"
+
 #: pages/index.html:3
 msgid "Welcome"
 msgstr "ברוכים הבאים"
@@ -33,10 +41,38 @@ msgstr "ברוכים הבאים"
 msgid "Welcome to index page"
 msgstr ""
 
-#: templates/base.html:44 templates/base.html.py:46
+#: pages/links.html:3
+msgid "Links"
+msgstr "קישורים"
+
+#: pages/links.html:5
+msgid "Favorite Links"
+msgstr "קישורים מועדפים"
+
+#: pages/talks.html:3 pages/talks.html.py:5
+msgid "Talks and Presentations"
+msgstr "הרצאות ומצגות"
+
+#: pages/toolbox.html:3
+msgid "Toolbox"
+msgstr "ארגז כלים"
+
+#: pages/toolbox.html:5
+msgid "Some of my favorite tools"
+msgstr "חלק מהכלים האהובים עלי"
+
+#: templates/base.html:36
+msgid "Archive"
+msgstr "ארכיון"
+
+#: templates/base.html:37
+msgid "Tags"
+msgstr "תגים"
+
+#: templates/base.html:58 templates/base.html.py:61
 msgid "Content licensed under"
 msgstr "התוכן תחת רישיון"
 
-#: templates/base.html:44 templates/base.html.py:47
+#: templates/base.html:58 templates/base.html.py:62
 msgid "Attribution-ShareAlike 3.0 Unported"
 msgstr "ייחוס-שיתוף זהה 3.0"
