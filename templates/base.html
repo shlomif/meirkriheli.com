@@ -20,16 +20,17 @@
   <script src="{% static "js/vendor/modernizr-2.6.1.min.js" %}"></script>
   {% block extra_head %}{% endblock %}
 </head>
-<body class="light">
+<body class="light {{ object.slug  }}">
   <section id="without-footer">
   <header id="main-header" class="dark">
-    <h1><a href="{% i18n_url LANGUAGE_CODE pages_index %}"><img alt="{{
-            site.name }}" src="{% static "img/logo.png" %}"></a></h1>
+    <h1><a href="{% i18n_url LANGUAGE_CODE pages_index %}"><img alt="{{ site.name }}" src="{% static "img/logo.png" %}"></a></h1>
     <nav>
-        <ul>{% get_pages LANGUAGE_CODE as all_pages %}
-        {% for page in all_pages %}
-            <li id="page-{{ page.slug }}"><a href="{{ page.get_absolute_url   }}">{{ page.title  }}</a></li>
-        {% endfor %}
+{% get_page LANGUAGE_CODE "index" as index_page %}
+{% get_page LANGUAGE_CODE "talks" as talks_page %}
+        <ul>
+            <li id="page-{{ index_page.slug }}"><a href="{{ index_page.get_absolute_url }}"><i class="icon-home"></i> {{ index_page.title }}</a></li>
+            <li id="page-archive"><a href="{% i18n_url LANGUAGE_CODE blog_archive %}"><i class="icon-list-ul"></i> {% trans "Archive" %}</a>
+            <li id="page-{{ talks_page.slug }}"><a href="{{ talks_page.get_absolute_url }}"><i class="icon-eye-open"></i> {{ talks_page.title }}</a></li>
         </ul>
     </nav>
   </header>
