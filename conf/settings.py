@@ -115,6 +115,7 @@ PIPELINE_CSS = {
             'css/normalize_rtl.css',
             'css/main.css',
             'css/syntax.css',
+            'css/font-awesome.less',
             'css/theme.less',
         ),
         'output_filename': 'css/meir.css',

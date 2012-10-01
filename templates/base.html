@@ -21,7 +21,7 @@
   {% block extra_head %}{% endblock %}
 </head>
 <body class="light">
-  <header>
+  <header id="main-header">
     <h1><a href="{% i18n_url LANGUAGE_CODE pages_index %}">{{ site.name }}</a></h1>
     <nav>
         <ul>{% get_pages LANGUAGE_CODE as all_pages %}
@@ -37,8 +37,19 @@
 
   {% block content %}{% endblock %}
 
-  <footer>
-      Footer
+  <footer id="main-footer">
+    {% spaceless %}
+    <section class="license">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+        <img alt="{% trans "Content licensed under" %} {% trans "Attribution-ShareAlike 3.0 Unported" %}" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png">
+      </a>
+      {% trans "Content licensed under" %}
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">{% trans "Attribution-ShareAlike 3.0 Unported" %}</a>
+    </section>
+   {% endspaceless %}
+    <section class="html5">
+        <a href="http://www.w3.org/html/logo/"><img src="{% static "img/HTML5_Logo_32.png" %}" alt="HTML5 Powered with CSS3 / Styling, and Semantics" title="HTML5 Powered with CSS3 / Styling, and Semantics"></a>
+      </section>
   </footer>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="{% static "js/vendor/jquery-1.8.0.min.js" %}"><\/script>')</script>

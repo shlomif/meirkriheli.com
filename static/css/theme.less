@@ -32,3 +32,43 @@
 /* light is default mode, so pair with general html definition */
 .light { .rebase(@base3,@base2,@base1,@base0,@base01,@base01,@base02,@base03)}
 .dark  { .rebase(@base03,@base02,@base01,@base00,@base0,@base1,@base2,@base3)}
+
+/* Some mixins */
+.clearfix {
+  zoom: 1;
+	&:after {
+    display: block;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+    content: ".";
+	}
+}
+
+
+@gutter: 20px;
+
+#main-footer {
+  padding: @gutter / 2 @gutter;
+  background-color: @orange;
+  color: @base3;
+  .clearfix;
+
+  .license {
+    width:60%; float:left;
+    html[dir=rtl] & { float:right  }
+    .accentize(@base3);
+    color: @base3;
+    img {
+      border-width:0; vertical-align:middle;
+      padding-right:10px;
+      display:inline-block;
+
+      html[dir=rtl] & { padding-right:0; padding-left:10px;  }
+    }
+  }
+  .html5 {
+    width: 40%; float:right; text-align: right;
+    html[dir=rtl] & { float:left; text-align:left  }
+  }
+}
