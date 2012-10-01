@@ -21,7 +21,8 @@
   {% block extra_head %}{% endblock %}
 </head>
 <body class="light">
-  <header id="main-header">
+  <section id="without-footer">
+  <header id="main-header" class="dark">
     <h1><a href="{% i18n_url LANGUAGE_CODE pages_index %}">{{ site.name }}</a></h1>
     <nav>
         <ul>{% get_pages LANGUAGE_CODE as all_pages %}
@@ -35,8 +36,11 @@
       <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
   <![endif]-->
 
-  {% block content %}{% endblock %}
-
+  <section id="content">
+{% block content %}{% endblock %}
+  </section>
+      
+  </section> <!-- without-footer -->
   <footer id="main-footer">
     {% spaceless %}
     <section class="license">
