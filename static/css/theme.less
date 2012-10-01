@@ -212,6 +212,17 @@
   }
 }
 
+#main-menu-toggle {
+  position: absolute;
+  display: none;
+  top:  @gutter / 4;
+  right:  @gutter / 2;
+  font-size: 1.6em;
+  .gradient(@base01, @base02, @base01);
+  .rounded(10px);
+  .box-shadow(0 0 5px rgba(0,0,0, 0.4));
+  padding: 0 @gutter / 2;
+}
 
 #content {
   position: relative;
@@ -248,8 +259,15 @@
 @media screen and (max-width: 799px) {
   #main-header {
     ul { padding:0; }
-    li { border-bottom:1px solid @base0; padding: @gutter/4 @gutter;}
+    li { 
+      border-bottom:1px solid @base0;
+      padding:0; 
+      a { padding: @gutter/4 @gutter; }
+    }
+    nav { display: none;  }
   }
+
+  #main-menu-toggle  { display: block; }
 }
 
 @media screen and (min-width: 800px) {
@@ -264,6 +282,7 @@
 
     h1 { .rounded(10px); }
     ul { margin: @gutter / 2 0 0; padding:0;  }
+    nav { display: block  }
   }
 
   #content { 
