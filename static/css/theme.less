@@ -192,7 +192,13 @@
 
 #main-header {
   text-align: center;
-  h1 {margin:0}
+  h1 {
+    margin:0;
+    .box-shadow(0 0 5px rgba(0,0,0, 0.4));
+    .gradient(@base01, @base02, @base01);
+    a {display:block; text-decoration: none; padding: @gutter/4 0;}
+    img { display: block; border:0; margin: 0 auto; }
+  }
 }
 
 
@@ -235,6 +241,8 @@
 
     .box-shadow(0 -5px 8px rgba(0,0,0, .8));
     html[dir=rtl] & { left:0; right:auto;  }
+
+    h1 { .rounded(10px); }
   }
 
   #content { 

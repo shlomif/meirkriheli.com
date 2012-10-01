@@ -23,11 +23,12 @@
 <body class="light">
   <section id="without-footer">
   <header id="main-header" class="dark">
-    <h1><a href="{% i18n_url LANGUAGE_CODE pages_index %}">{{ site.name }}</a></h1>
+    <h1><a href="{% i18n_url LANGUAGE_CODE pages_index %}"><img alt="{{
+            site.name }}" src="{% static "img/logo.png" %}"></a></h1>
     <nav>
         <ul>{% get_pages LANGUAGE_CODE as all_pages %}
         {% for page in all_pages %}
-            <li><a href="{{ page.get_absolute_url   }}">{{ page.title  }}</a></li>
+            <li id="page-{{ page.slug }}"><a href="{{ page.get_absolute_url   }}">{{ page.title  }}</a></li>
         {% endfor %}
         </ul>
     </nav>
