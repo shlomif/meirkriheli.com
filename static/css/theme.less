@@ -226,6 +226,8 @@
   .box-shadow(0 0 5px rgba(0,0,0, 0.4));
   padding: 0 @gutter / 2;
   outline:  none;
+
+  html[dir=rtl] & { left: @gutter/2; right:auto  }
 }
 
 #content {
