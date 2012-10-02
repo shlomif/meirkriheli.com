@@ -1,0 +1,236 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>html 5: PyWeb-IL 16</title>
+	<style type="text/css" media="screen">
+		html, body { height:100%; width:100%; margin:0; padding:0; overflow:hidden}
+		body { 
+			color:white; background: #0169c9 url(./html5.png);
+			background-size:100% 100%;
+			-moz-background-size:100% 100%;
+			-webkit-background-size:100% 100%;
+			-o-background-size:100% 100%;
+			font-size: 28pt;
+			font-family: Arial;
+		}
+		h1 { font-size:72pt; color:#fce94f; margin:40pt 0 20pt 0; text-shadow: 3px 3px #333 }
+		a, a:visited {color: #fce94f; text-decoration: underline}
+		h2 { font-size:42pt; direction:rtl; margin:0 0 40pt 0; text-shadow: 2px 2px #333  }
+		.slide  { text-align:center; height:100%; width:100%; display:none; } 
+		.indent { margin: 5pt 40pt; }
+		table { text-align:left; border-collapse: collapse }
+		table, td { border: 1px solid #fce94f}
+		td { padding:10px; vertical-align:top }
+		#container { height:100%; margin:0; outline:0 }
+		pre { text-align:left; margin:0; padding:0; font-size:24pt; }
+	</style>
+	<script type="text/javascript" charset="utf-8" src="mootools-1.2.4-core-yc.js"></script>
+	<script type="text/javascript">
+		var current = -1;
+		var slides = 0;
+
+		function switch_slide(ev, slide_num) {
+			if (ev) {
+				step = 0;
+				ev = new Event(ev)
+				if (ev.control || (ev.key == 'space')) step = 1; // control moves forward;
+				if (ev.alt || (ev.key == 'backspace')) step = -1;    // alt moves backword
+				if (!step) return; 
+			}
+			else { 
+				step = (typeof(slide_num)=="undefined" ? 1 : slide_num - current);
+			}
+			if ( (step > 0 && current < slides.length-1) || (step<0 && current>0) ) {
+				if (current>-1) {
+					slides[current].fade('out').setStyle('display', 'none');
+				}
+				current += step;
+				slides[current].setStyle('display','block').fade('in');
+			}
+			$('container').focus();
+		}
+
+		window.addEvent('domready', function() {
+			slides = $$('div.slide');
+			slides.fade('hide');
+			switch_slide();
+			window.addEvents({'click':switch_slide, 'keydown':switch_slide});
+			drawShape();
+
+		});
+		function drawShape(){
+		  // get the canvas element using the DOM
+		  var canvas = document.getElementById('heart');
+
+
+		  // Make sure we don't execute when canvas isn't supported
+		  if (canvas.getContext){
+
+		    // use getContext to use the canvas for drawing
+		    var ctx = canvas.getContext('2d');
+
+		    // Draw shapes
+
+		    ctx.fillStyle = '#fce94f';
+		    ctx.beginPath();
+		    ctx.moveTo(75,40);
+		    ctx.bezierCurveTo(75,37,70,25,50,25);
+		    ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
+		    ctx.bezierCurveTo(20,80,40,102,75,120);
+		    ctx.bezierCurveTo(110,102,130,80,130,62.5);
+		    ctx.bezierCurveTo(130,62.5,130,25,100,25);
+		    ctx.bezierCurveTo(85,25,75,37,75,40);
+		    ctx.fill();
+
+		  } else {
+		    alert('You need Safari or Firefox 1.5+ to see this demo.');
+		  }
+		}
+	</script>
+</head>
+<body>
+<div id="container">
+	<div class="slide">
+		<h1>HTML 5</h1>
+		<h2>PyWeb-IL 16</h2>
+	</div>
+	<div class="slide">
+		<h1>Semantic</h1>
+		<h2>אתה לא תגיד נגיד !</h2>
+		<p>section, nav, header, footer, article, mark, time ...</p>
+	</div>
+	<div class="slide" style="text-align:left">
+		<table style="width:80%; margin:40pt auto; height:80%" cellspacing="0" cellpadding="0">
+			<tr> <td colspan="2">&lt;header&gt;<div class="indent">&lt;nav&gt;</div></td> </tr>
+			<tr>
+				<td style="width:70%">
+					&lt;article&gt;
+					<div class="indent">
+						&lt;header&gt;
+						<div class="indent">
+							&lt;time&gt;<br/>
+							&lt;h1&gt;<br/>
+						</div>
+						...<br/>
+						...
+					</div>
+				</td>
+				<td>&lt;aside&gt;</td>
+			</tr>
+			<tr> <td colspan="2">&lt;footer&gt;</td> </tr>
+		</table>
+	</div>
+	<div class="slide">
+		<h1>Semantic: Microdata</h1>
+		<h2>הלו? זה בלומפילד?</h2>
+		<pre>
+&lt;section itemscope
+	itemtype="http://data-vocabulary.org/Person"&gt;
+  &lt;h1 itemprop="name"&gt;Meir Kriheli&lt;/h1&gt;
+  &lt;img itemprop="photo" src="me.jpg" alt="[me]"&gt;
+&lt;/section&gt;
+
+		</pre>
+	</div>
+	<div class="slide">
+		<h1>Forms</h1>
+		<h2>מה שבע ? מה כמה !</h2>
+		<p>placeholder, autofocus<p>
+		<p>type = email | url | number | range | datetime | color</p>
+		<p>No validation yet (except Opera)</p>
+	</div>
+	<div class="slide">
+		<h1>Canvas</h1>
+		<h2>באיזה צבע אתה רוצה את הפס כסף ?</h2>
+		<p> Lines, text, gradients, curves,<br>arcs, rectangles, images ...</p>
+	</div>
+	<div class="slide" style="padding-top: 50pt;">
+		<canvas id="heart" width="150" height="150" style="float:left"> </canvas>
+		<pre style="margin-left:200px;">
+ctx.fillStyle = '#fce94f';
+ctx.beginPath();
+ctx.moveTo(75,40);
+ctx.bezierCurveTo(75,37,70,25,50,25);
+ctx.bezierCurveTo(20,25,20,62.5,20,62.5);
+ctx.bezierCurveTo(20,80,40,102,75,120);
+ctx.bezierCurveTo(110,102,130,80,130,62.5);
+ctx.bezierCurveTo(130,62.5,130,25,100,25);
+ctx.bezierCurveTo(85,25,75,37,75,40);
+ctx.fill();
+		</pre>
+	</div>
+	<div class="slide">
+		<h1>Video</h1>
+		<h2>לכי תכיני לי את החליפה של האיומים</h2>
+		<p>Theora, WebM, H.264</p>
+	</div>
+	<div class="slide">
+		<h1>Geolocation</h1>
+		<h2>שעה שאני מחפש את הים !</h2>
+		<p>Opt in</p>
+		<p>Coords: latitude, longitude, accuracy</p>
+	</div>
+	<div class="slide">
+		<h1>Storage</h1>
+		<h2>היה מנוע ?</h2>
+		<p>Persitent, key/value</p>
+		<p>Many non compatible implementations.</p>
+		<p>dojo.storage</p>
+	</div>
+	<div class="slide">
+		<h1>Offline</h1>
+		<h2>ואם זה שידור חי, אנחנו לא אוכלים חרא ?</h2>
+		<pre>
+	&lt;html manifest="/cache.manifest"&gt;
+
+	CACHE MANIFEST
+	/site.css
+	/logic.js
+	/logo.jpg
+		</pre>
+	</div>
+	<div class="slide">
+		<h1>The <span style="color:white;font-style:oblique">IE</span>lephant in the room</h1>
+		<h2>תן לי להחליט מה מגעיל לי ומה מגדיל לי</h2>
+		<p><a href="http://html5shim.googlecode.com/svn/trunk/html5.js">html5.js</a>,
+		<a href="http://code.google.com/p/explorercanvas/">ExplorerCanvas</a>, Google Gears</p>
+		<p>Hopes for IE9</p>
+	</div>
+	
+	<div class="slide">
+		<h1>Modernizer</h1>
+		<h2>כל מה שיש לי זה ה-1500 לירות שאין לי</h2>
+		<p><a href="http://www.modernizr.com/">http://www.modernizr.com/</a></p>
+	</div>
+	<div class="slide">
+		<h1>BiDi</h1>
+		<h2>איך קוראים בעברית לצ'ופצ'יק של הקומקום ?</h2>
+		<p>Auto dir, compatible set-direction for text input,<br>bullet rendering ...<p>
+		<p>See draft: <a href="http://www.w3.org/TR/html-bidi/">Additional Requirements for Bidi in HTML</a></p>
+	</div>
+	<div class="slide">
+		<h1>Django and html 5</h1>
+		<h2>אתה איתי או איתו? -  אני מהאו&quot;ם !</h2>
+		<p><a href="/rhec/django-html5/tree/master">django-html5</a> for form widgets, autofocus fallback</p>
+		<p>Multiple file upload problem, see <a href="http://code.djangoproject.com/ticket/12446">#12446</a></p>
+	</div>
+	<div class="slide">
+		<h1>Status</h1>
+		<h2>תבוא בסוף כסלו – תחילת נובמבר</h2>
+		<p>
+			In the loooong future, few non compativbe implementations,
+			Some can be used right now
+		</p>
+	</div>
+	<div class="slide">
+		<h1>Thank you</h1>
+		<h2>חן חן למתחנפן</h2>
+		<p>Mark Pilgrim's <a href="http://diveintohtml5.org/">Dive Into HTML 5</a></p>
+		<p><a href="http://www.whatwg.org/specs/web-apps/current-work/">WHATWG</a></p>
+		<p><a href="http://dev.w3.org/html5/spec/Overview.html">W3C</a></p>
+		<p>Contact me: <a href="mailto:meir@mksoft.co.il">meir@mksoft.co.il</a></p>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8: http://docutils.sourceforge.net/" />
+<meta name="version" content="S5 1.1" />
+<title>Tornado web server</title>
+<style type="text/css">
+
+.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #ffffff; }
+.highlight .c { color: #808080 } /* Comment */
+.highlight .err { color: #F00000; background-color: #F0A0A0 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #303030 } /* Operator */
+.highlight .cm { color: #808080 } /* Comment.Multiline */
+.highlight .cp { color: #507090 } /* Comment.Preproc */
+.highlight .c1 { color: #808080 } /* Comment.Single */
+.highlight .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #003080; font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #303090; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #6000E0; font-weight: bold } /* Literal.Number */
+.highlight .s { background-color: #fff0f0 } /* Literal.String */
+.highlight .na { color: #0000C0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #B00060; font-weight: bold } /* Name.Class */
+.highlight .no { color: #003060; font-weight: bold } /* Name.Constant */
+.highlight .nd { color: #505050; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #800000; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #F00000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0060B0; font-weight: bold } /* Name.Function */
+.highlight .nl { color: #907000; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #007000 } /* Name.Tag */
+.highlight .nv { color: #906030 } /* Name.Variable */
+.highlight .ow { color: #000000; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #6000E0; font-weight: bold } /* Literal.Number.Float */
+.highlight .mh { color: #005080; font-weight: bold } /* Literal.Number.Hex */
+.highlight .mi { color: #0000D0; font-weight: bold } /* Literal.Number.Integer */
+.highlight .mo { color: #4000E0; font-weight: bold } /* Literal.Number.Oct */
+.highlight .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
+.highlight .sc { color: #0040D0 } /* Literal.String.Char */
+.highlight .sd { color: #D04020 } /* Literal.String.Doc */
+.highlight .s2 { background-color: #fff0f0 } /* Literal.String.Double */
+.highlight .se { color: #606060; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
+.highlight .sh { background-color: #fff0f0 } /* Literal.String.Heredoc */
+.highlight .si { background-color: #e0e0e0 } /* Literal.String.Interpol */
+.highlight .sx { color: #D02000; background-color: #fff0f0 } /* Literal.String.Other */
+.highlight .sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */
+.highlight .s1 { background-color: #fff0f0 } /* Literal.String.Single */
+.highlight .ss { color: #A06000 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #306090 } /* Name.Variable.Class */
+.highlight .vg { color: #d07000; font-weight: bold } /* Name.Variable.Global */
+.highlight .vi { color: #3030B0 } /* Name.Variable.Instance */
+.highlight .il { color: #0000D0; font-weight: bold } /* Literal.Number.Integer.Long */
+
+</style>
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ui/default/slides.css"
+      type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css"
+      type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css"
+      type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css"
+      type="text/css" media="projection" id="operaFix" />
+
+<style type="text/css">
+#currentSlide {display: none;}
+</style>
+</head>
+<body>
+<div class="layout">
+<div id="controls"></div>
+<div id="currentSlide"></div>
+<div id="header">
+
+</div>
+<div id="footer">
+<h1>Tornado web server</h1>
+<h2>pyweb-il 29</h2>
+</div>
+</div>
+<div class="presentation">
+<div class="slide" id="slide0">
+<h1 class="title">Tornado web server</h1>
+<h2 class="subtitle" id="pyweb-il-29">PyWeb-IL 29</h2>
+
+<p><a class="reference external" href="http://www.tornadoweb.org/">http://www.tornadoweb.org/</a></p>
+
+</div>
+<div class="slide" id="buzzwords-galore">
+<h1>Buzzwords galore</h1>
+<ul class="incremental simple">
+<li><a class="reference external" href="http://www.kegel.com/c10k.html">C10K</a> problem</li>
+<li>Scalable, non-blocking</li>
+<li>web server ...</li>
+<li>and web application framework</li>
+<li>FriendFeed, thousands of long running connections</li>
+</ul>
+</div>
+<div class="slide" id="meta">
+<h1>Meta</h1>
+<ul class="incremental simple">
+<li>Python, 2.5-2.7, 3.2</li>
+<li>Small code base</li>
+<li>Few dependencies</li>
+<li>Uses epoll/kqueue</li>
+<li>Best on Linux/BSD derivatives</li>
+<li>Windows ? Not for production</li>
+<li>Apache 2 License</li>
+</ul>
+</div>
+<div class="slide" id="hello-pyweb">
+<h1>Hello PyWeb</h1>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">tornado.ioloop</span>
+<span class="kn">import</span> <span class="nn">tornado.web</span>
+
+<span class="k">class</span> <span class="nc">MainHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&quot;Hello PyWeb&quot;</span><span class="p">)</span>
+
+<span class="n">application</span> <span class="o">=</span> <span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">Application</span><span class="p">([</span>
+    <span class="p">(</span><span class="s">r&quot;/&quot;</span><span class="p">,</span> <span class="n">MainHandler</span><span class="p">),</span>
+<span class="p">])</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">application</span><span class="o">.</span><span class="n">listen</span><span class="p">(</span><span class="mi">8888</span><span class="p">)</span>
+    <span class="n">tornado</span><span class="o">.</span><span class="n">ioloop</span><span class="o">.</span><span class="n">IOLoop</span><span class="o">.</span><span class="n">instance</span><span class="p">()</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="slide" id="asynchronous">
+<h1>Asynchronous</h1>
+<ul class="incremental simple">
+<li>Asynchronous http client</li>
+<li>non blocking socket wrapper</li>
+<li>unittest with async requests support</li>
+<li>Events and callbacks can be cumbersome</li>
+<li>use when needed ...</li>
+</ul>
+</div>
+<div class="slide" id="tornado-web-asynchronous">
+<h1>tornado.web.asynchronous</h1>
+<p>When used, request is done when finish is called.</p>
+<div class="highlight"><pre><span class="n">URL</span> <span class="o">=</span> <span class="s">&#39;http://www.bankisrael.gov.il/currency.xml&#39;</span>
+
+<span class="k">class</span> <span class="nc">CurrencyHandler</span><span class="p">(</span><span class="n">tornado</span><span class="o">.</span><span class="n">web</span><span class="o">.</span><span class="n">RequestHandler</span><span class="p">):</span>
+    <span class="nd">@tornado.web.asynchronous</span>
+    <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+       <span class="n">http</span> <span class="o">=</span> <span class="n">httpclient</span><span class="o">.</span><span class="n">AsyncHTTPClient</span><span class="p">()</span>
+       <span class="n">http</span><span class="o">.</span><span class="n">fetch</span><span class="p">(</span><span class="n">URL</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_got_currency</span><span class="p">)</span>
+
+    <span class="k">def</span> <span class="nf">_got_currency</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">response</span><span class="p">):</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">body</span><span class="p">)</span>
+       <span class="bp">self</span><span class="o">.</span><span class="n">finish</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="slide" id="non-blocking-db-calls">
+<h1>Non blocking DB calls ?</h1>
+<ul class="incremental simple">
+<li>Nope, nor monkey patching of sockets</li>
+<li>Load balance with more instances</li>
+<li>Use databases with asynchronous support like <a class="reference external" href="https://github.com/bitly/asyncmongo">asyncmongo</a></li>
+</ul>
+</div>
+<div class="slide" id="web-application-server">
+<h1>Web application server</h1>
+<ul class="incremental simple">
+<li>Non blocking HTTP server</li>
+<li>Application configuration (settings, urls)</li>
+<li>Request handlers</li>
+</ul>
+</div>
+<div class="slide" id="core-web-framework">
+<h1>Core web framework</h1>
+<ul class="incremental simple">
+<li>Templates</li>
+<li>Escaping</li>
+<li>Localization (CSV or gettext)</li>
+</ul>
+</div>
+<div class="slide" id="templates">
+<h1>Templates</h1>
+<ul class="incremental">
+<li><p class="first">Compiled to python</p>
+</li>
+<li><p class="first">No restrictions on expressions</p>
+<div class="highlight"><pre><span class="cp">{%</span> <span class="k">for</span> <span class="nv">student</span> <span class="k">in</span>
+      <span class="o">[</span><span class="nv">p</span> <span class="nv">for</span> <span class="nv">p</span> <span class="k">in</span> <span class="nv">people</span> <span class="k">if</span> <span class="nv">p.age</span> <span class="o">&gt;</span> <span class="m">23</span><span class="o">]</span> <span class="cp">%}</span><span class="x"></span>
+<span class="x">  &lt;li&gt;</span><span class="cp">{{</span> <span class="nv">escape</span><span class="o">(</span><span class="nv">student.name</span><span class="o">)</span> <span class="cp">}}</span><span class="x">&lt;/li&gt;</span>
+<span class="cp">{%</span> <span class="k">end</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+</li>
+</ul>
+</div>
+<div class="slide" id="templates-custom-functions">
+<h1>Templates custom functions</h1>
+<p>Can pass custom functions like variables.</p>
+<p>python</p>
+<div class="highlight"><pre><span class="k">def</span> <span class="nf">add</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+   <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
+<span class="n">template</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">add</span><span class="o">=</span><span class="n">add</span><span class="p">)</span>
+</pre></div>
+<p>template</p>
+<div class="highlight"><pre><span class="cp">{{</span> <span class="nv">add</span><span class="o">(</span><span class="m">1</span><span class="o">,</span> <span class="m">2</span><span class="o">)</span> <span class="cp">}}</span><span class="x"></span>
+</pre></div>
+</div>
+<div class="slide" id="brownie-points">
+<h1>Brownie points</h1>
+<ul class="incremental simple">
+<li>Websocket support</li>
+<li>tornado.options: settings definitions, config file and command-line parsing</li>
+<li>WSGI application container (async goes down the drain)</li>
+<li>Secure cookies and XSRF protection</li>
+<li>Reusable UI modules</li>
+<li>3rd party auth and login ...</li>
+</ul>
+</div>
+<div class="slide" id="tornado-auth">
+<h1>tornado.auth</h1>
+<ul>
+<li><p class="first">Mixins implementing various third-party authentication schemes</p>
+<blockquote>
+<ul class="simple">
+<li>OpenID</li>
+<li>OAuth, OAuth2</li>
+<li>Twitter</li>
+<li>FriendFeed</li>
+<li>Google</li>
+<li>Facebook</li>
+</ul>
+</blockquote>
+</li>
+</ul>
+</div>
+<div class="slide" id="closing-time">
+<h1>Closing time</h1>
+<dl class="docutils">
+<dt>Contact</dt>
+<dd>Meir Kriheli &lt;<a class="reference external" href="mailto:mkriheli&#64;gmail.com">mkriheli&#64;gmail.com</a>&gt;</dd>
+</dl>
+<ul class="simple">
+<li>Questions ?</li>
+<li>Discussion</li>
+</ul>
+</div>
+</div>
+</body>
+</html>

@@ -267,6 +267,7 @@
   article {
     margin: 20px 0; padding:20px 0;
     text-align:center;
+    position: relative;
 
     img { display:block;  margin:0 auto;
         .box-shadow(-4px 4px 8px rgba(0,0,0, .25));}
@@ -321,5 +322,20 @@
 
   #main-footer {
     .license span {display: inline}
+  }
+
+  #talks {
+    article {
+      padding: 0 200px 0 80px ;
+      margin: @gutter*3  @gutter*6;
+      text-align: inherit;
+      img { 
+        position: absolute; top:0; left:0;
+        html[dir=rtl] & {left:auto; right:0;}
+      }
+      div { text-align: center  }
+      h2 { margin: 0 0 @gutter / 2; font-size: 1.1em  }
+      p { margin: 0 0 @gutter }
+    }   
   }
 }

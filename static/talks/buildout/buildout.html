@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.6: http://docutils.sourceforge.net/" />
+<meta name="version" content="S5 1.1" />
+<title>zc.buildout</title>
+<style type="text/css">
+
+/*
+:Author: David Goodger (goodger@python.org)
+:Id: $Id: html4css1.css 5951 2009-05-18 18:03:10Z milde $
+:Copyright: This stylesheet has been placed in the public domain.
+
+Default cascading style sheet for the HTML output of Docutils.
+
+See http://docutils.sf.net/docs/howto/html-stylesheets.html for how to
+customize this style sheet.
+*/
+
+/* used to remove borders from tables and images */
+.borderless, table.borderless td, table.borderless th {
+  border: 0 }
+
+table.borderless td, table.borderless th {
+  /* Override padding for "table.docutils td" with "! important".
+     The right padding separates the table cells. */
+  padding: 0 0.5em 0 0 ! important }
+
+.first {
+  /* Override more specific margin styles with "! important". */
+  margin-top: 0 ! important }
+
+.last, .with-subtitle {
+  margin-bottom: 0 ! important }
+
+.hidden {
+  display: none }
+
+a.toc-backref {
+  text-decoration: none ;
+  color: black }
+
+blockquote.epigraph {
+  margin: 2em 5em ; }
+
+dl.docutils dd {
+  margin-bottom: 0.5em }
+
+/* Uncomment (and remove this text!) to get bold-faced definition list terms
+dl.docutils dt {
+  font-weight: bold }
+*/
+
+div.abstract {
+  margin: 2em 5em }
+
+div.abstract p.topic-title {
+  font-weight: bold ;
+  text-align: center }
+
+div.admonition, div.attention, div.caution, div.danger, div.error,
+div.hint, div.important, div.note, div.tip, div.warning {
+  margin: 2em ;
+  border: medium outset ;
+  padding: 1em }
+
+div.admonition p.admonition-title, div.hint p.admonition-title,
+div.important p.admonition-title, div.note p.admonition-title,
+div.tip p.admonition-title {
+  font-weight: bold ;
+  font-family: sans-serif }
+
+div.attention p.admonition-title, div.caution p.admonition-title,
+div.danger p.admonition-title, div.error p.admonition-title,
+div.warning p.admonition-title {
+  color: red ;
+  font-weight: bold ;
+  font-family: sans-serif }
+
+/* Uncomment (and remove this text!) to get reduced vertical space in
+   compound paragraphs.
+div.compound .compound-first, div.compound .compound-middle {
+  margin-bottom: 0.5em }
+
+div.compound .compound-last, div.compound .compound-middle {
+  margin-top: 0.5em }
+*/
+
+div.dedication {
+  margin: 2em 5em ;
+  text-align: center ;
+  font-style: italic }
+
+div.dedication p.topic-title {
+  font-weight: bold ;
+  font-style: normal }
+
+div.figure {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+div.footer, div.header {
+  clear: both;
+  font-size: smaller }
+
+div.line-block {
+  display: block ;
+  margin-top: 1em ;
+  margin-bottom: 1em }
+
+div.line-block div.line-block {
+  margin-top: 0 ;
+  margin-bottom: 0 ;
+  margin-left: 1.5em }
+
+div.sidebar {
+  margin: 0 0 0.5em 1em ;
+  border: medium outset ;
+  padding: 1em ;
+  background-color: #ffffee ;
+  width: 40% ;
+  float: right ;
+  clear: right }
+
+div.sidebar p.rubric {
+  font-family: sans-serif ;
+  font-size: medium }
+
+div.system-messages {
+  margin: 5em }
+
+div.system-messages h1 {
+  color: red }
+
+div.system-message {
+  border: medium outset ;
+  padding: 1em }
+
+div.system-message p.system-message-title {
+  color: red ;
+  font-weight: bold }
+
+div.topic {
+  margin: 2em }
+
+h1.section-subtitle, h2.section-subtitle, h3.section-subtitle,
+h4.section-subtitle, h5.section-subtitle, h6.section-subtitle {
+  margin-top: 0.4em }
+
+h1.title {
+  text-align: center }
+
+h2.subtitle {
+  text-align: center }
+
+hr.docutils {
+  width: 75% }
+
+img.align-left, .figure.align-left{
+  clear: left ;
+  float: left ;
+  margin-right: 1em }
+
+img.align-right, .figure.align-right {
+  clear: right ;
+  float: right ;
+  margin-left: 1em }
+
+.align-left {
+  text-align: left }
+
+.align-center {
+  clear: both ;
+  text-align: center }
+
+.align-right {
+  text-align: right }
+
+/* reset inner alignment in figures */
+div.align-right {
+  text-align: left }
+
+/* div.align-center * { */
+/*   text-align: left } */
+
+ol.simple, ul.simple {
+  margin-bottom: 1em }
+
+ol.arabic {
+  list-style: decimal }
+
+ol.loweralpha {
+  list-style: lower-alpha }
+
+ol.upperalpha {
+  list-style: upper-alpha }
+
+ol.lowerroman {
+  list-style: lower-roman }
+
+ol.upperroman {
+  list-style: upper-roman }
+
+p.attribution {
+  text-align: right ;
+  margin-left: 50% }
+
+p.caption {
+  font-style: italic }
+
+p.credits {
+  font-style: italic ;
+  font-size: smaller }
+
+p.label {
+  white-space: nowrap }
+
+p.rubric {
+  font-weight: bold ;
+  font-size: larger ;
+  color: maroon ;
+  text-align: center }
+
+p.sidebar-title {
+  font-family: sans-serif ;
+  font-weight: bold ;
+  font-size: larger }
+
+p.sidebar-subtitle {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+p.topic-title {
+  font-weight: bold }
+
+pre.address {
+  margin-bottom: 0 ;
+  margin-top: 0 ;
+  font: inherit }
+
+pre.literal-block, pre.doctest-block {
+  margin-left: 2em ;
+  margin-right: 2em }
+
+span.classifier {
+  font-family: sans-serif ;
+  font-style: oblique }
+
+span.classifier-delimiter {
+  font-family: sans-serif ;
+  font-weight: bold }
+
+span.interpreted {
+  font-family: sans-serif }
+
+span.option {
+  white-space: nowrap }
+
+span.pre {
+  white-space: pre }
+
+span.problematic {
+  color: red }
+
+span.section-subtitle {
+  /* font-size relative to parent (h1..h6 element) */
+  font-size: 80% }
+
+table.citation {
+  border-left: solid 1px gray;
+  margin-left: 1px }
+
+table.docinfo {
+  margin: 2em 4em }
+
+table.docutils {
+  margin-top: 0.5em ;
+  margin-bottom: 0.5em }
+
+table.footnote {
+  border-left: solid 1px black;
+  margin-left: 1px }
+
+table.docutils td, table.docutils th,
+table.docinfo td, table.docinfo th {
+  padding-left: 0.5em ;
+  padding-right: 0.5em ;
+  vertical-align: top }
+
+table.docutils th.field-name, table.docinfo th.docinfo-name {
+  font-weight: bold ;
+  text-align: left ;
+  white-space: nowrap ;
+  padding-left: 0 }
+
+h1 tt.docutils, h2 tt.docutils, h3 tt.docutils,
+h4 tt.docutils, h5 tt.docutils, h6 tt.docutils {
+  font-size: 100% }
+
+ul.auto-toc {
+  list-style-type: none }
+
+</style>
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<script src="ui/advanced_gfx/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ui/advanced_gfx/slides.css"
+      type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/advanced_gfx/outline.css"
+      type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/advanced_gfx/print.css"
+      type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/advanced_gfx/opera.css"
+      type="text/css" media="projection" id="operaFix" />
+
+<style type="text/css">
+#currentSlide {display: none;}
+</style>
+</head>
+<body>
+<div class="layout">
+<div id="controls"></div>
+<div id="currentSlide"></div>
+<div id="header">
+
+</div>
+<div id="footer">
+<h1>zc.buildout</h1>
+<h2>pyweb-il 10 &#64; Google Israel - 30.11.2009</h2>
+</div>
+</div>
+<div class="presentation">
+<div class="slide" id="slide0">
+<h1 class="title">zc.buildout</h1>
+<h2 class="subtitle" id="fitting-puzzle-pieces-together">Fitting puzzle pieces together</h2>
+
+<p>&quot;Buildout is an exceedingly civilized way to develop an app.&quot;</p>
+<p>--- Jacob Kaplan-Moss, creator of Django</p>
+
+</div>
+<div class="slide" id="django-is-an-island">
+<h1>Django is an island</h1>
+<p>Let's take Django as an example:</p>
+<ul class="incremental">
+<li><p class="first">Single package</p>
+</li>
+<li><div class="first line-block">
+<div class="line">No extra dependencies</div>
+<div class="line">Ignoring optional PIL and DB</div>
+</div>
+</li>
+<li><p class="first">Easy to install and start playing with</p>
+</li>
+<li><p class="first">Part of it's success</p>
+</li>
+</ul>
+</div>
+<div class="slide" id="no-project-is-an-island">
+<h1>No Project is an island</h1>
+<p>Framework has no dependencies ? Cool.</p>
+<p>OTOH non trivial projects have many of them (good
+thing ™). Let's take Django as an example:</p>
+<ul class="incremental simple">
+<li>Reusable apps - power and flexibility</li>
+<li>Start with a simple project</li>
+<li>Add tagging, registration, multilingual, mailer, south, locale-url, piston ...</li>
+<li>The puzzle is complete, we have the pieces</li>
+</ul>
+</div>
+<div class="slide" id="no-developer-is-an-island">
+<h1>No developer is an island</h1>
+<ul class="incremental">
+<li><p class="first">Developers work in teams</p>
+</li>
+<li><div class="first line-block">
+<div class="line">Single developer ?</div>
+<div class="line">No island - develop vs deploy</div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line">We need to replicate the pieces.</div>
+<div class="line">No problem, right ?</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="slide" id="lost-your-marbles">
+<h1>Lost your marbles ?</h1>
+<p>Recreating the environment and dependencies walk in the park.</p>
+<ul class="incremental">
+<li><p class="first">Different framework versions</p>
+</li>
+<li><div class="first line-block">
+<div class="line">Specific apps and packages</div>
+<div class="line">often a specific scm revision</div>
+</div>
+</li>
+<li><p class="first">Isolated environment</p>
+</li>
+<li><p class="first">Deployment headaches: paths, FastCGI, WSGI</p>
+</li>
+</ul>
+</div>
+<div class="slide" id="virtualenv">
+<h1>virtualenv</h1>
+<ul class="incremental simple">
+<li>Setup script to install dependencies into the env
+(e.g: TurboGears <tt class="docutils literal"><span class="pre">tg2-bootstrap.py</span></tt>)</li>
+<li>Need to activate/deactivate environments upon switching projects</li>
+<li>What about different deployment profiles (staging, production) ?</li>
+<li>Handle changed or removed dependencies ?</li>
+</ul>
+</div>
+<div class="slide" id="enter-zc-buildout">
+<h1>Enter zc.buildout</h1>
+<p>Python-based reproducible build and configuration system for
+multi-part applications:</p>
+<ul class="simple">
+<li>Creating</li>
+<li>Assembling</li>
+<li>Deploying</li>
+</ul>
+</div>
+<div class="slide" id="work-flow">
+<h1>Work flow</h1>
+<ol class="arabic simple">
+<li>Create configuration file</li>
+<li>Get and run the bootstrap script</li>
+<li>Run bin/buildout</li>
+<li>Update configuration, add/remove dependencies</li>
+<li>Goto 3</li>
+</ol>
+</div>
+<div class="slide" id="create-configuration-file">
+<h1>Create configuration file</h1>
+<div class="small sidebar">
+<p class="first sidebar-title">buildout.cfg</p>
+<div class="last"><div class="highlight"><pre><span style="color: #008000; font-weight: bold">[buildout]</span>
+<span style="color: #7D9029">parts</span> <span style="color: #666666">=</span>
+<span style="color: #BA2121">develop = .</span>
+</pre></div>
+</div></div>
+<ul class="medium simple">
+<li>Ini like file. default <tt class="docutils literal">buildout.cfg</tt></li>
+<li>Entry section is <tt class="docutils literal">[buildout]</tt></li>
+<li><tt class="docutils literal">parts</tt>: configuration sections, each handled
+with a <tt class="docutils literal">recipe</tt></li>
+<li><tt class="docutils literal">develop</tt>: paths to create develop eggs from.
+Must contain setup file</li>
+</ul>
+</div>
+<div class="slide" id="recipes-for-a-great-dish">
+<h1>Recipes for a great dish</h1>
+<p>Each part is handled by a recipe which is downloaded as needed.
+There are many of them, search <tt class="docutils literal">buildout</tt> &#64;PyPI. e.g:</p>
+<ul class="simple">
+<li><tt class="docutils literal">zc.recipe.egg</tt>: Install eggs, custom intreperters with path</li>
+<li><tt class="docutils literal">djangorecipe</tt>: Setup django env, custom manage.py, paths, fcgi and wsgi</li>
+<li><tt class="docutils literal">infrae.subversion</tt>: Checkout from subversion</li>
+<li><tt class="docutils literal">MercurialRecipe</tt>: Cloning/pulling a Mercurial repository</li>
+</ul>
+</div>
+<div class="slide" id="get-and-run-bootstrap">
+<h1>Get and run bootstrap</h1>
+<p>Get it:</p>
+<div class="highlight"><pre>wget http://svn.zope.org/*checkout*/<span style="color: #BB6622; font-weight: bold">\</span>
+  zc.buildout/trunk/bootstrap/bootstrap.py
+</pre></div>
+<p>Run it:</p>
+<div class="small"><div class="highlight"><pre><span style="color: #666666">[</span>meir@metallix buildout<span style="color: #666666">]</span><span style="color: #19177C">$ </span>python bootstrap.py
+Creating directory <span style="color: #BA2121">&#39;/home/meir/tmp/buildout/bin&#39;</span>.
+Creating directory <span style="color: #BA2121">&#39;/home/meir/tmp/buildout/parts&#39;</span>.
+Creating directory <span style="color: #BA2121">&#39;/home/meir/tmp/buildout/develop-eggs&#39;</span>.
+Generated script <span style="color: #BA2121">&#39;/home/meir/tmp/buildout/bin/buildout&#39;</span>.
+</pre></div>
+</div></div>
+<div class="slide" id="update-configuration">
+<h1>Update configuration</h1>
+<div class="highlight"><pre><span style="color: #008000; font-weight: bold">[buildout]</span>
+<span style="color: #7D9029">parts</span> <span style="color: #666666">=</span> <span style="color: #BA2121">python</span>
+<span style="color: #7D9029">eggs</span> <span style="color: #666666">=</span>
+       <span style="color: #BA2121">docutils</span>
+       <span style="border: 1px solid #FF0000">pygments</span>
+
+<span style="color: #008000; font-weight: bold">[python]</span>
+<span style="color: #7D9029">recipe</span> <span style="color: #666666">=</span> <span style="color: #BA2121">zc.recipe.egg</span>
+<span style="color: #7D9029">interpreter</span> <span style="color: #666666">=</span> <span style="color: #BA2121">mypython</span>
+<span style="color: #7D9029">eggs</span> <span style="color: #666666">=</span> <span style="color: #BA2121">${buildout:eggs}</span>
+</pre></div>
+</div>
+<div class="slide" id="run-bin-buildout">
+<h1>Run bin/buildout</h1>
+<div class="highlight"><pre><span style="color: #666666">[</span>meir@metallix buildout<span style="color: #666666">]</span><span style="color: #19177C">$ </span>bin/buildout
+Installing python.
+Generated interpreter <span style="color: #BA2121">&#39;/home/meir/tmp/buildout/bin/mypython&#39;</span>.
+</pre></div>
+<p>It's all in the paths, let's examine bin/mypython:</p>
+<div class="highlight"><pre><span style="color: #408080; font-style: italic">#!/usr/bin/python</span>
+
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">sys</span>
+
+sys<span style="color: #666666">.</span>path[<span style="color: #666666">0</span>:<span style="color: #666666">0</span>] <span style="color: #666666">=</span> [
+  <span style="color: #BA2121">&#39;/home/meir/.buildout/eggs/docutils-0.6-py2.6.egg&#39;</span>,
+  <span style="color: #BA2121">&#39;/home/meir/.buildout/eggs/Pygments-1.1.1-py2.6.egg&#39;</span>,
+  ]
+
+<span style="color: #666666">...</span>
+</pre></div>
+</div>
+<div class="slide" id="djangorecipe-example">
+<h1>djangorecipe example</h1>
+<div class="highlight"><pre><span style="color: #008000; font-weight: bold">[buildout]</span>
+<span style="color: #7D9029">parts</span> <span style="color: #666666">=</span> <span style="color: #BA2121">python django</span>
+<span style="color: #7D9029">develop</span> <span style="color: #666666">=</span> <span style="color: #BA2121">.</span>
+<span style="color: #7D9029">eggs</span> <span style="color: #666666">=</span> <span style="color: #BA2121">django-bidi-utils</span>
+
+<span style="color: #008000; font-weight: bold">[python]</span>
+<span style="color: #7D9029">recipe</span> <span style="color: #666666">=</span> <span style="color: #BA2121">zc.recipe.egg</span>
+<span style="color: #7D9029">interpreter</span> <span style="color: #666666">=</span> <span style="color: #BA2121">python</span>
+<span style="color: #7D9029">eggs</span> <span style="color: #666666">=</span> <span style="color: #BA2121">${buildout:eggs}</span>
+
+<span style="color: #008000; font-weight: bold">[django]</span>
+<span style="color: #7D9029">recipe</span> <span style="color: #666666">=</span> <span style="color: #BA2121">djangorecipe</span>
+<span style="color: #7D9029">version</span> <span style="color: #666666">=</span> <span style="color: #BA2121">1.0.2</span>
+<span style="color: #7D9029">project</span> <span style="color: #666666">=</span> <span style="color: #BA2121">bidiutils</span>
+<span style="color: #7D9029">projectegg</span> <span style="color: #666666">=</span> <span style="color: #BA2121">bidiutils</span>
+<span style="color: #7D9029">settings</span> <span style="color: #666666">=</span> <span style="color: #BA2121">testsettings</span>
+<span style="color: #7D9029">test</span> <span style="color: #666666">=</span> <span style="color: #BA2121">bidiutils</span>
+<span style="color: #7D9029">eggs</span> <span style="color: #666666">=</span> <span style="color: #BA2121">${buildout:eggs}</span>
+</pre></div>
+</div>
+<div class="slide" id="extending-config-files">
+<h1>Extending config files</h1>
+<p>Config files can extends other ones, useful for different scenarios,
+e.g <tt class="docutils literal">staging.cfg</tt>:</p>
+<div class="highlight"><pre><span style="color: #008000; font-weight: bold">[buildout]</span>
+
+<span style="color: #7D9029">extends</span> <span style="color: #666666">=</span> <span style="color: #BA2121">buildout.cfg</span>
+<span style="color: #7D9029">parts +</span><span style="color: #666666">=</span>
+    <span style="color: #BA2121">magic-debugging-egg</span>
+
+<span style="color: #008000; font-weight: bold">[magic-debugging-egg]</span>
+
+<span style="color: #7D9029">recipe</span> <span style="color: #666666">=</span> <span style="color: #BA2121">...</span>
+</pre></div>
+<div class="highlight"><pre><span style="color: #19177C">$ </span>bin/buildout -c staging.cfg
+</pre></div>
+</div>
+<div class="slide" id="recipes-for-fun-and-profit">
+<h1>Recipes for fun and profit</h1>
+<p>Can't find the receipe ? Need customization ? don't despair, recipes
+are python after all, write your own.</p>
+<p>Each recipe is a class implementing <tt class="docutils literal">install</tt>, <tt class="docutils literal">update</tt> and optional
+<tt class="docutils literal">uninstall</tt>. For more info, see <a class="reference external" href="http://www.buildout.org/docs/tutorial.html#writing-recipes">Writing recipes</a> in the buildout
+tutorial.</p>
+</div>
+<div class="slide" id="that-s-all-folks-questions">
+<h1>That's all folks, questions ?</h1>
+<ul>
+<li><div class="first line-block">
+<div class="line">Buildout tutorial:</div>
+<div class="line"><a class="reference external" href="http://www.buildout.org/docs/tutorial.html">http://www.buildout.org/docs/tutorial.html</a></div>
+</div>
+</li>
+<li><div class="first line-block">
+<div class="line">Jacob Kaplan-Moss:</div>
+<div class="line"><br /></div>
+<div class="line">Developing Django apps with zc.buildout:</div>
+<div class="line"><a class="reference external" href="http://jacobian.org/writing/django-apps-with-buildout/">http://jacobian.org/writing/django-apps-with-buildout/</a></div>
+<div class="line"><br /></div>
+<div class="line">More buildout notes:</div>
+<div class="line"><a class="reference external" href="http://jacobian.org/writing/more-buildout-notes/">http://jacobian.org/writing/more-buildout-notes/</a></div>
+</div>
+</li>
+</ul>
+<p>Contact: Meir Kriheli, <a class="reference external" href="mailto:meir&#64;mksoft.co.il">meir&#64;mksoft.co.il</a></p>
+</div>
+</div>
+</body>
+</html>

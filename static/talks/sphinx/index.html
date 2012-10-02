@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<meta name="version" content="S5 1.1" />
+<title>Sphinx</title>
+<style type="text/css">
+
+.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #ffffff; }
+.highlight .c { color: #808080 } /* Comment */
+.highlight .err { color: #F00000; background-color: #F0A0A0 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #303030 } /* Operator */
+.highlight .cm { color: #808080 } /* Comment.Multiline */
+.highlight .cp { color: #507090 } /* Comment.Preproc */
+.highlight .c1 { color: #808080 } /* Comment.Single */
+.highlight .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #003080; font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #303090; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #6000E0; font-weight: bold } /* Literal.Number */
+.highlight .s { background-color: #fff0f0 } /* Literal.String */
+.highlight .na { color: #0000C0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #B00060; font-weight: bold } /* Name.Class */
+.highlight .no { color: #003060; font-weight: bold } /* Name.Constant */
+.highlight .nd { color: #505050; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #800000; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #F00000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0060B0; font-weight: bold } /* Name.Function */
+.highlight .nl { color: #907000; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #007000 } /* Name.Tag */
+.highlight .nv { color: #906030 } /* Name.Variable */
+.highlight .ow { color: #000000; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #6000E0; font-weight: bold } /* Literal.Number.Float */
+.highlight .mh { color: #005080; font-weight: bold } /* Literal.Number.Hex */
+.highlight .mi { color: #0000D0; font-weight: bold } /* Literal.Number.Integer */
+.highlight .mo { color: #4000E0; font-weight: bold } /* Literal.Number.Oct */
+.highlight .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
+.highlight .sc { color: #0040D0 } /* Literal.String.Char */
+.highlight .sd { color: #D04020 } /* Literal.String.Doc */
+.highlight .s2 { background-color: #fff0f0 } /* Literal.String.Double */
+.highlight .se { color: #606060; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
+.highlight .sh { background-color: #fff0f0 } /* Literal.String.Heredoc */
+.highlight .si { background-color: #e0e0e0 } /* Literal.String.Interpol */
+.highlight .sx { color: #D02000; background-color: #fff0f0 } /* Literal.String.Other */
+.highlight .sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */
+.highlight .s1 { background-color: #fff0f0 } /* Literal.String.Single */
+.highlight .ss { color: #A06000 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #306090 } /* Name.Variable.Class */
+.highlight .vg { color: #d07000; font-weight: bold } /* Name.Variable.Global */
+.highlight .vi { color: #3030B0 } /* Name.Variable.Instance */
+.highlight .il { color: #0000D0; font-weight: bold } /* Literal.Number.Integer.Long */
+
+</style>
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ui/default/slides.css"
+      type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css"
+      type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css"
+      type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css"
+      type="text/css" media="projection" id="operaFix" />
+
+<style type="text/css">
+#currentSlide {display: none;}
+</style>
+</head>
+<body>
+<div class="layout">
+<div id="controls"></div>
+<div id="currentSlide"></div>
+<div id="header">
+
+</div>
+<div id="footer">
+<h1>Sphinx</h1>
+<h2>PyWeb-IL 34 Feb 2012</h2>
+</div>
+</div>
+<div class="presentation">
+<div class="slide" id="slide0">
+<h1 class="title">Sphinx</h1>
+
+<p>Documentation in Action</p>
+
+</div>
+<div class="no-title slide" id="sphinx-and-pyramid">
+<h1>Sphinx and Pyramid</h1>
+<img alt="Egypt.Giza.Sphinx.02.jpg" class="align-right" src="Egypt.Giza.Sphinx.02.jpg" />
+<p>Sphinx and Pyramid &#64; same meeting :)</p>
+<p>What are the odds  ?</p>
+</div>
+<div class="no-title slide" id="writing-documentation">
+<h1>Writing Documentation</h1>
+<img alt="Sumerian_26th_c_Adab.jpg" class="align-right" src="Sumerian_26th_c_Adab.jpg" />
+<p>Writing documentation is hard</p>
+</div>
+<div class="no-title slide" id="good-documentation">
+<h1>Good documentation</h1>
+<img alt="Moses_dore.jpg" class="align-right" src="Moses_dore.jpg" />
+<p>Writing good, usable &amp; acceptable documentation is harder</p>
+</div>
+<div class="slide" id="enter-sphinx">
+<h1>Enter Sphinx</h1>
+<ul class="simple">
+<li>Cross References</li>
+<li>Hierarchical structure (document tree)</li>
+<li>Indexes</li>
+<li>Syntax Highlighting</li>
+<li>Extensions</li>
+<li>Output formats (Html, LaTeX, man pages, plain text)</li>
+</ul>
+</div>
+<div class="slide" id="solid-foundation">
+<h1>Solid Foundation</h1>
+<img alt="PileDriving.jpg" class="align-right" src="PileDriving.jpg" />
+<ul class="simple">
+<li>reStructuredText - markup</li>
+<li>Pygments - Syntax highlighting</li>
+<li>Jinja2 - Templates</li>
+<li>CSS - Themes</li>
+</ul>
+</div>
+<div class="slide" id="rst-sections">
+<h1>rst - Sections</h1>
+<img alt="sections.png" class="align-right" src="sections.png" />
+<div class="highlight"><pre><span class="gh">Title</span>
+<span class="gh">=====</span>
+<span class="gh">Subtitle</span>
+<span class="gh">--------</span>
+Titles are underlined
+(or over- and underlined)
+with a printing
+nonalphanumeric 7-bit ASCII
+character. Recommended
+choices are
+&quot;<span class="s">``= - ` : &#39; &quot; ~ ^ _ * + # &lt; &gt;``</span>&quot;.
+</pre></div>
+</div>
+<div class="slide" id="rst-lists">
+<h1>rst - Lists</h1>
+<img alt="bullets.png" class="align-right" src="bullets.png" />
+<div class="highlight"><pre>Bullet lists:
+
+<span class="m">-</span> This is item 1
+<span class="m">-</span> This is item 2
+
+<span class="m">-</span> Bullets are &quot;-&quot;, &quot;*&quot; or &quot;+&quot;.
+  Continuing text must be aligned
+  after the bullet and whitespace.
+</pre></div>
+</div>
+<div class="slide" id="rst-hyperlinks">
+<h1>rst - HyperLinks</h1>
+<img alt="links.png" class="align-right" src="links.png" />
+<div class="highlight"><pre>External hyperlinks,
+like Sphinx_ or <span class="s">`example website`_</span>.
+
+<span class="p">..</span> <span class="nt">_Sphinx:</span> http://sphinx.pocoo.org/index.html
+<span class="p">..</span> <span class="nt">_example website:</span> http://example.com
+</pre></div>
+</div>
+<div class="slide" id="rst-admonition">
+<h1>rst - Admonition</h1>
+<img alt="admonition.png" class="align-right" src="admonition.png" />
+<div class="highlight"><pre><span class="p">..</span> <span class="ow">note</span><span class="p">::</span> This is a note admonition.
+   This is the second line
+
+<span class="p">..</span> <span class="ow">warning</span><span class="p">::</span> Don&#39;t do that
+
+<span class="p">..</span> <span class="ow">tip</span><span class="p">::</span>
+    Do that and good things will follow
+</pre></div>
+</div>
+<div class="no-title slide" id="rst-more">
+<h1>rst - More</h1>
+<p>Complete reStructuredText reference at <a class="reference external" href="http://docutils.sourceforge.net/docs/#user-introductory-tutorial-material-for-end-users">docutils web site</a></p>
+</div>
+<div class="slide" id="sphinx-quick-start">
+<h1>Sphinx - Quick start</h1>
+<div class="highlight"><pre><span class="nv">$ </span>pip install sphinx
+<span class="nv">$ </span>mkdir docs
+<span class="nv">$ </span>sphinx-quickstart docs
+...
+<span class="nv">$ </span><span class="nb">cd </span>docs
+<span class="nv">$ </span>make html
+</pre></div>
+</div>
+<div class="slide" id="conf-py">
+<h1>conf.py</h1>
+<ul class="simple">
+<li>Set theme</li>
+<li>Adjust paths</li>
+<li>Change configuration</li>
+<li>Add extensions</li>
+</ul>
+</div>
+<div class="slide" id="toc-tree">
+<h1>TOC tree</h1>
+<div class="align-right"><div class="highlight"><pre><span class="p">..</span> <span class="ow">toctree</span><span class="p">::</span>
+   <span class="nc">:maxdepth:</span> <span class="nf">2</span>
+
+   install
+   quickstart
+   guide
+</pre></div>
+</div><div class="line-block">
+<div class="line">Custom directive, adds relations between the single</div>
+<div class="line">files and table of contents.</div>
+</div>
+</div>
+<div class="slide" id="labels">
+<h1>Labels</h1>
+<p>Use for cross referencing.</p>
+<div class="align-right"><div class="highlight"><pre>For more info see <span class="na">:ref:</span><span class="nv">`coolproj`</span>
+</pre></div>
+</div><div class="highlight"><pre><span class="p">..</span> <span class="nt">_coolproj:</span>
+
+<span class="gh">Cool Project</span>
+<span class="gh">==============</span>
+</pre></div>
+</div>
+<div class="slide" id="indexing">
+<h1>Indexing</h1>
+<img alt="index.png" class="align-right" src="index.png" />
+<div class="highlight"><pre><span class="p">..</span> <span class="ow">index</span><span class="p">::</span>
+    single: Execution Example
+    single: User Guide; Execution Example
+
+<span class="gh">Execution Example</span>
+<span class="gh">====================</span>
+</pre></div>
+</div>
+<div class="slide" id="python-domain">
+<h1>Python Domain</h1>
+<ul>
+<li><p class="first">General and module indexing</p>
+</li>
+<li><p class="first">References</p>
+</li>
+<li><div class="first line-block">
+<div class="line">See <a class="reference external" href="http://sphinx.pocoo.org/domains.html#the-python-domain">The Python Domain</a> for</div>
+<div class="line">complete reference.</div>
+</div>
+</li>
+</ul>
+</div>
+<div class="slide" id="python-domain-example">
+<h1>Python Domain Example</h1>
+<div class="highlight"><pre><span class="p">..</span> <span class="ow">py:function</span><span class="p">::</span> format_exception(etype, value, tb[, limit=None])
+
+   Format the exception with a traceback.
+
+   <span class="nc">:param etype:</span> <span class="nf">exception type</span>
+   :param value: exception value
+   <span class="nc">:param tb:</span> <span class="nf">traceback object</span>
+   <span class="nc">:param limit:</span> <span class="nf">maximum number of stack frames to show</span>
+   <span class="nc">:type limit:</span> <span class="nf">integer or None</span>
+   <span class="nc">:rtype:</span> <span class="nf">list of strings</span>
+
+
+For more info see <span class="na">:py:func:</span><span class="nv">`format_exception`</span>
+</pre></div>
+</div>
+<div class="slide" id="rendered-example">
+<h1>Rendered Example</h1>
+<img alt="pydomain.png" src="pydomain.png" />
+</div>
+<div class="slide" id="built-in-domains">
+<h1>Built in domains</h1>
+<ul class="simple">
+<li>Python</li>
+<li>C</li>
+<li>C++</li>
+<li>Standard</li>
+<li>JavaScript</li>
+</ul>
+</div>
+<div class="slide" id="contrib">
+<h1>Contrib</h1>
+<p>More domains and extensions at the <a class="reference external" href="https://bitbucket.org/birkenfeld/sphinx-contrib/">Sphinx Contrib</a>. Partial list:</p>
+<ul class="simple">
+<li>Erlang domain</li>
+<li>Ruby domain</li>
+<li>HTTP domain</li>
+<li>PHP domain</li>
+</ul>
+<p>And many more (youtube, feed, google analytics etc.).</p>
+</div>
+<div class="slide" id="autodoc-extension">
+<h1>autodoc extension</h1>
+<p>Can Import modules and create documentation from docstrings.</p>
+<div class="highlight"><pre><span class="p">..</span> <span class="ow">automodule</span><span class="p">::</span> awesome
+   <span class="nc">:members:</span>
+
+<span class="p">..</span> <span class="ow">autoclass</span><span class="p">::</span> AwesomeCls
+   :members:
+   <span class="nc">:inherited-members:</span>
+</pre></div>
+</div>
+<div class="slide" id="readthedocs-org">
+<h1>readthedocs.org</h1>
+<img alt="readthedocs.png" class="align-right" src="readthedocs.png" />
+<ul class="simple">
+<li>Auto-updating</li>
+<li>Cached</li>
+<li>Versions</li>
+<li>PDF Generation</li>
+<li>Search</li>
+<li>Alternate Domains</li>
+<li>Intersphinx</li>
+</ul>
+</div>
+<div class="slide" id="images-credits">
+<h1>Images Credits</h1>
+<ul class="simple">
+<li><a class="reference external" href="http://en.wikipedia.org/wiki/File:Sumerian_26th_c_Adab.jpg">Sumerian</a></li>
+<li><a class="reference external" href="http://he.wikipedia.org/wiki/%D7%A7%D7%95%D7%91%D7%A5:Moses_dore.jpg">Moses dore</a></li>
+<li><a class="reference external" href="http://en.wikipedia.org/wiki/File:Egypt.Giza.Sphinx.02.jpg">Egypt.Giza.Sphinx.02</a></li>
+<li><a class="reference external" href="http://en.wikipedia.org/wiki/File:PileDriving.jpg">PileDriving</a></li>
+</ul>
+</div>
+<div class="slide" id="contact">
+<h1>Contact</h1>
+<ul class="simple">
+<li>Meir Kriheli</li>
+<li><a class="reference external" href="http://meirkriheli.com">http://meirkriheli.com</a></li>
+<li><a class="reference external" href="mailto:mkriheli&#64;gmail.com">mkriheli&#64;gmail.com</a></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

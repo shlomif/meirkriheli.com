@@ -1,0 +1,25 @@
+.slide h1 { padding-left:0; }
+.rtl { direction:rtl; text-align:right } 
+.example {
+    border:1px solid gray;
+    box-shadow: 5px 5px 2px #aaa;
+    -moz-box-shadow: 5px 5px 2px #aaa;
+    -webkit-box-shadow: 5px 5px 2px #aaa;
+    padding: 5px;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+.arrow {
+    min-height: 32px; padding-left: 34px;
+    background: url(../../arrow.png) 0 50% no-repeat;
+}
+.rtl.arrow {
+    padding-left:0; padding-right:34px;
+    background: url(../../arrow.png) 100% 50% no-repeat;
+}
+.rtl.arrow-rtl {
+    padding-left:0; padding-right:34px;
+    background: url(../../arrow_rtl.png) 100% 50% no-repeat;
+}
+pre { line-height: 1.25em; }
