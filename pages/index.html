@@ -1,10 +1,28 @@
 {% extends "base.html" %}{% load i18n st_core blog %}
 
-{% block title %}{% trans "Welcome" %}{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
 
-{% block description %}{% trans "Welcome to index page" %}{% endblock %}
+{% block description %}{% trans "Meir Kriheli's web site" %}{% endblock %}
 
 {% block content %}
+  <section id="welcome">
+    <h1>{% trans "Welcome" %}</h1>
+{% if LANGUAGE_CODE == "he" %}
+    מה יש לעשות פה ? לקרוא פוסטים <a href="{% i18n_url LANGUAGE_CODE blog_archive %}">בבלוג</a>,
+    להציץ <a href="{% i18n_url LANGUAGE_CODE pages_page slug="talks" %}">במצגות שהעברתי</a> באירועים שונים או
+    ב<a href="{% i18n_url LANGUAGE_CODE pages_page slug="toolbox" %}">ארגז הכלים</a> שלי, וכמובן
+    <a href="{% i18n_url LANGUAGE_CODE pages_page slug="about" %}">לקרות אודותי</a>.
+{% endif %}
+{% if LANGUAGE_CODE == "en" %}
+    What can one do around here ?
+    Read some <a href="{% i18n_url LANGUAGE_CODE blog_archive %}">blog posts</a>,
+    Take a look at my <a href="{% i18n_url LANGUAGE_CODE pages_page slug="talks" %}">Presenations</a>
+    from various events or my
+    <a href="{% i18n_url LANGUAGE_CODE pages_page slug="toolbox" %}">Toolbox</a>
+    and read <a href="{% i18n_url LANGUAGE_CODE pages_page slug="about" %}">About me</a>.
+    
+{% endif %}
+  </section>
   {% get_recent_posts LANGUAGE_CODE POSTS_IN_INDEX as posts %}
   {% for post in posts %}{% include "blog/post_excerpt.html" %}{% endfor %}
 {% endblock %}
