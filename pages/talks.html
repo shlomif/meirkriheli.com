@@ -1,9 +1,70 @@
-{% extends "base.html" %}{% load i18n st_core %}
+{% extends "base.html" %}{% load i18n staticfiles st_core %}
 
 {% block title %}{% trans "Talks and Presentations" %}{% endblock %}
 
 {% block description %}{% trans "Talks and Presentations" %}{% endblock %}
 
 {% block content %}
-    Bla bla
+    <h1>{% trans "Talks and Presentations" %}</h1>
+{% if LANGUAGE_CODE == "he" %}
+<p>
+    הרצאות ומצגות אשר העברתי במסגרות שונות. רובן קבצים  בתחביר
+    <a href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">reStructuredText</a>
+    שהומרו ל-html בעזרת <a href="http://docutils.sourceforge.net/docs/user/slide-shows.html">rst2s5</a>.
+    לקבלת התוצאה הסופית בוצעו מספר התאמות ל-css.
+</p>
+<section id="talks">
+<article>
+    <h2>תשתיות html עבור התקנים ניידים</h2>
+    <img src="{% static "img/mobile.png" %}" alt="html5 mobile frameworks"></img>
+    <p>תשתיות לפיתוח יישומי mobile מבוססי html5. כולל: jQuery mobile&rlm;,
+    Dojo-mobile ו-Sencha Touch.</p>
+    <div>
+        <a href="mobile/htmlmobile.html" target="_blank">צפיה</a>
+        <a href="mobile.tar.gz">הורדה</a>
+    </div>
+</article>
+<article>
+    <h2>Tornado - שרת יישומי הווב</h2>
+    <img src="{% static "img/tornado.png" %}" alt="tornado web server"></img>
+    <p>שרת ותשתית מבוססי פייתון לפיתוח יישומי ווב אסינכרוניים, מענה לבעיית
+    ה-<a class="external" href="http://www.kegel.com/c10k.html">C10K</a>.</p>
+    <div>
+        <a href="tornado/tornado.html" target="_blank">צפיה</a>
+        <a href="tornado.tar.gz">הורדה</a>
+    </div>
+</article>
+<article>
+    <h2>HTML 5</h2>
+    <img src="{% static "img/html5.png" %}" alt="html 5"></img>
+    <p>סמנטי, מיקרו-מידע, טפסים, canvas, וידאו, geolocation, אחסון, offline
+    ודו-כיווניות.</p>
+    <div>
+        <a href="html5/html5.html" target="_blank">צפיה</a>
+        <a href="html5.tar.gz">הורדה</a>
+    </div>
+</article>
+<article>
+    <h2>zc.buildout</h2>
+    <img src="{% static "img/buildout.png" %}" alt="zc.buildout"></img>
+    <p>מערכת בניה מבוססת פייתון לתצורה, הרכבה והפצת יישומי מרובי רכיבים. </p>
+    <div>
+        <a href="buildout/buildout.html" target="_blank">צפיה</a>
+        <a href="buildout.tar.gz">הורדה</a>
+    </div>
+</article>
+<article>
+    <h2>דו-כיווניות, i18n, L10n ו-Django</h2>
+    <img src="{% static "img/django-i18n.png" %}" alt="RTL, i18n, l10n and django"></img>
+    <p>דו-כיווניות, בינאום ותרגום בכלל, ו-Django בפרט.</p>
+    <div>
+        <a href="django-i18n/django-i18n.html" target="_blank">צפיה</a>
+        <a href="django-i18n.tar.gz">הורדה</a>
+    </div>
+</article>
+</section>
+{% endif %}    
+{% if LANGUAGE_CODE == "en" %}
+    
+{% endif %}    
 {% endblock %}
