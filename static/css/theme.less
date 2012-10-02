@@ -326,15 +326,18 @@
 
   #talks {
     article {
-      padding: 0 200px 0 80px ;
-      margin: @gutter*3  @gutter*6;
+      max-width: 400px;
+      margin: @gutter*3  auto;
+      padding: 0 0 0 200px;
       text-align: inherit;
+
+      html[dir=rtl] & {padding-left:0; padding: 0 200px 0 0;}
       img { 
         position: absolute; top:0; left:0;
         html[dir=rtl] & {left:auto; right:0;}
       }
       div { text-align: center  }
-      h2 { margin: 0 0 @gutter / 2; font-size: 1.1em  }
+      h2 { margin: 0 0 @gutter / 2; font-size: 1em  }
       p { margin: 0 0 @gutter }
     }   
   }

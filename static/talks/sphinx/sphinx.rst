@@ -132,7 +132,7 @@ rst - Admonition
 .. sourcecode:: rst
 
     .. note:: This is a note admonition.
-       This is the second line 
+       This is the second line
 
     .. warning:: Don't do that
 
@@ -262,7 +262,7 @@ Python Domain Example
 
 
     For more info see :py:func:`format_exception`
-    
+
 
 
 Rendered Example
@@ -285,16 +285,18 @@ Built in domains
 Contrib
 --------------------
 
-More domains and extensions at the `Sphinx Contrib`_. Partial list:
+More domains and extensions at the `Sphinx Contrib`_.
 
 * Erlang domain
 * Ruby domain
 * HTTP domain
 * PHP domain
 
-And many more (youtube, feed, google analytics etc.).
+And many more (youtube, feed, google analytics etc.). Couldn't find a Perl
+domain, any takers ?
 
 .. _Sphinx Contrib: https://bitbucket.org/birkenfeld/sphinx-contrib/
+
 
 
 autodoc extension
@@ -310,6 +312,26 @@ Can Import modules and create documentation from docstrings.
     .. autoclass:: AwesomeCls
        :members:
        :inherited-members:
+
+
+
+Pod-POM-View-Restructured
+-------------------------------
+
+Outputs reStructuredText that is expected to be used with Sphinx.
+
+Verbatim sections in POD will use perl syntax hilighting by default.
+
+**pod2rst** - convert .pod files to .rst files.
+
+
+Hands on
+--------------
+
+* Checkout Dancer
+* Convert the docs
+* Let's Dance
+
 
 
 readthedocs.org
