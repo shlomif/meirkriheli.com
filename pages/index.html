@@ -7,11 +7,14 @@
 {% block content %}
   <section id="welcome">
     <h1>{% trans "Welcome" %}</h1>
+    <p>
 {% if LANGUAGE_CODE == "he" %}
-    מה יש לעשות פה ? לקרוא פוסטים <a href="{% i18n_url LANGUAGE_CODE blog_archive %}">בבלוג</a>,
-    להציץ <a href="{% i18n_url LANGUAGE_CODE pages_page slug="talks" %}">במצגות שהעברתי</a> באירועים שונים או
-    ב<a href="{% i18n_url LANGUAGE_CODE pages_page slug="toolbox" %}">ארגז הכלים</a> שלי, וכמובן
-    <a href="{% i18n_url LANGUAGE_CODE pages_page slug="about" %}">לקרוא אודותי</a>.
+    מה אפשר לעשות פה ? לקרוא פוסטים <a href="{% i18n_url LANGUAGE_CODE blog_archive %}">בבלוג</a>,
+    להציץ <a href="{% i18n_url LANGUAGE_CODE pages_page slug="talks" %}">במצגות
+        שהעברתי</a> במסגרת אירועים שונים או
+    ב<a href="{% i18n_url LANGUAGE_CODE pages_page slug="toolbox" %}">ארגז
+        הכלים</a> החביבים עלי
+    ו<a href="{% i18n_url LANGUAGE_CODE pages_page slug="about" %}">לקרוא אודותי</a>.
 {% endif %}
 {% if LANGUAGE_CODE == "en" %}
     What can one do around here ?
@@ -20,8 +23,8 @@
     from various events or my
     <a href="{% i18n_url LANGUAGE_CODE pages_page slug="toolbox" %}">Toolbox</a>
     and read <a href="{% i18n_url LANGUAGE_CODE pages_page slug="about" %}">About me</a>.
-    
 {% endif %}
+    </p>
   </section>
   {% get_recent_posts LANGUAGE_CODE POSTS_IN_INDEX as posts %}
   {% for post in posts %}{% include "blog/post_excerpt.html" %}{% endfor %}

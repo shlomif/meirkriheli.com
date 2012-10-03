@@ -20,7 +20,7 @@
   <script src="{% static "js/vendor/modernizr-2.6.1.min.js" %}"></script>
   {% block extra_head %}{% endblock %}
 </head>
-<body class="light {{ object.slug  }}">
+<body class="light {{ object.slug  }} {% block body_class %}{% endblock %}">
   <section id="without-footer">
   <header id="main-header" class="dark">
     <section id="social-links">
