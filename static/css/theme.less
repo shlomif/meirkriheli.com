@@ -385,6 +385,9 @@
   }
 }
 
+body {
+  background: @base3 url("../img/body_bg.png");
+}
 
 #welcome {
   p {
@@ -398,6 +401,9 @@
     }
   }
 }
-body {
-  background: @base3 url("../img/body_bg.png");
+
+body.index #page-index, body.talks #page-talks, body.toolbox #page-toolbox,
+body.links #page-links, body.about #page-about, body.blog #page-archive,
+body.tags #page-tags {
+  a {color:@orange;}
 }
