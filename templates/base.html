@@ -25,7 +25,7 @@
   <header id="main-header" class="dark">
     <h1><a href="{% i18n_url LANGUAGE_CODE pages_index %}"><img alt="{{ site.name }}" src="{% static "img/logo.png" %}"></a></h1>
     <a href="#" id="main-menu-toggle"><i class="icon-list-ul"></i></a>
-    <nav>
+    <nav id="main-menu">
 {% get_page LANGUAGE_CODE "index" as index_page %}
 {% get_page LANGUAGE_CODE "talks" as talks_page %}
 {% get_page LANGUAGE_CODE "toolbox" as toolbox_page %}

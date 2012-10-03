@@ -2,7 +2,7 @@
 	$(function() {
 		$('#main-menu-toggle').click(function(e) {
 			e.preventDefault();
-			$('#main-header nav').toggle();
+			$('#main-menu').toggle();
 
 			return false;
 		});
