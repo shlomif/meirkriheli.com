@@ -5,5 +5,21 @@
 {% block description %}{% trans "Favorite Links" %}{% endblock %}
 
 {% block content %}
-    Bla bla
+  <h1>{% trans "Favorite Links" %}</h1>
+  <ul>
+{% if LANGUAGE_CODE == "he" %}
+    <li><a href="http://whatsup.org.il">Whatsup, תמיכה וחדשות לינוקס וקוד פתוח בעברית</a></li>
+    <li><a href="http://hamakor.org.il">עמותת &quot;המקור&quot;</a></li>
+    <li><a href="http://planet.foss.org.il/">פלאנט FOSS-IL</a></li>
+    <li><a href="http://idkn.wordpress.com/">לראות שונה - עידו קנר</a></li>
+    <li><a href="http://planet.python.org/">פלאנט פייתון</a></li>
+{% endif %}
+{% if LANGUAGE_CODE == "en"%}
+    <li><a href="http://whatsup.org.il">Whatsup, Hebrew Linux &amp; Open Source news and support</a></li>
+    <li><a href="http://hamakor.org.il">Hamakor - An Israeli Society for Free Software and Open-Source Code</a></li>
+    <li><a href="http://planet.foss.org.il/">Planet FOSS-IL</a></li>
+    <li><a href="http://idkn.wordpress.com/">See Different - Ido Kanner</a></li>
+    <li><a href="http://planet.python.org/">Planet Python</a></li>
+{% endif %}
+  </ul>
 {% endblock %}
