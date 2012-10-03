@@ -196,7 +196,10 @@
 #main-header {
   background: @base03 url("../img/header_bg.png");
   text-align: center;
-  a {text-decoration: none;}
+  a {
+    text-decoration: none;
+    &:hover { color: @orange; }
+  }
   h1 {
     margin:0;
     .box-shadow(0 0 5px rgba(0,0,0, 0.4));
@@ -229,6 +232,10 @@
   outline:  none;
 
   html[dir=rtl] & { left: @gutter/2; right:auto  }
+}
+
+#social-links, #social-links2 {
+  display:none;
 }
 
 #content {
@@ -298,6 +305,21 @@
       a { padding: @gutter/4 @gutter; }
     }
     #main-menu { display: none;  }
+    #social-links2 {
+      ul {
+        list-style: none;
+        border-bottom:1px solid @base0;
+        .clearfix;
+      }
+      span { display:none }
+      li {
+        border-bottom:0 none;
+        float: left;
+        html[dir=rtl] & { float: right; }
+        width: 16%;
+        a { display: block; font-size:1.5em; text-align: center; }
+      }
+    }
   }
 
   #main-menu-toggle  { display: block; }
@@ -306,7 +328,7 @@
 @media screen and (min-width: 800px) {
 
   #main-header{
-    padding: @gutter @gutter 0;
+    padding: 0 @gutter;
     position:absolute; width: @sidebar-width - @gutter * 2;
     right:0; top:0; bottom:0;
 
@@ -319,7 +341,7 @@
   }
 
   #content { 
-    min-height: 300px;
+    min-height: 400px;
     margin-right: @sidebar-width;
     padding: @gutter 8%;
     html[dir=rtl] & { margin-left: @sidebar-width; margin-right: 0; }
@@ -345,6 +367,21 @@
       h2 { margin: 0 0 @gutter / 2; font-size: 1em  }
       p { margin: 0 0 @gutter }
     }   
+  }
+
+  #social-links {
+    display: block;
+    ul {
+      list-style: none; 
+      .clearfix;
+    }
+    span { display:none }
+    li {
+      float: left;
+      html[dir=rtl] & { float: right; }
+      width: 16%;
+      a { display: block; font-size:1.5em; text-align: center; }
+    }
   }
 }
 
