@@ -273,7 +273,9 @@
     position: relative;
 
     img { display:block;  margin:0 auto;
-        .box-shadow(-4px 4px 8px rgba(0,0,0, .25));}
+        .box-shadow(-4px 4px 8px rgba(0,0,0, .25));
+        html[dir=rtl] & { .box-shadow(4px 4px 8px rgba(0,0,0, .25)); }
+    }
     div {
       .accentize(@base3);
       a { 
