@@ -49,7 +49,10 @@
             <li id="page-{{ toolbox_page.slug }}"><a href="{{ toolbox_page.get_absolute_url }}"><i class="icon-cogs"></i> {{ toolbox_page.title }}</a></li>
             <li id="page-{{ links_page.slug }}"><a href="{{ links_page.get_absolute_url }}"><i class="icon-link"></i> {{ links_page.title }}</a></li>
             <li id="page-{{ about_page.slug }}"><a href="{{ about_page.get_absolute_url }}"><i class="icon-user"></i> {{ about_page.title }}</a></li>
-        </ul>
+            {% for page in object.get_translations %}
+            <li><a href="{{ page.get_absolute_url  }}" title="{{ page.title }}"><i class="icon-flag"></i> {{ page.get_language }}</a></li>
+            {% endfor %}
+            </ul>
     </nav>
     <section id="social-links2">
       <ul>
