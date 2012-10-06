@@ -94,8 +94,8 @@ GOOGLE_ANALYTICS_ID = 'UA-26475861-1'
 POSTS_IN_INDEX = 2
 
 # disqus settings
-DISQUS_API_KEY = ''
-DISQUS_WEBSITE_SHORTNAME = ''
+DISQUS_API_KEY = ''  # This is in my local settings
+DISQUS_WEBSITE_SHORTNAME = 'meirkriheli'
 
 # django-pipline settings
 PIPELINE_YUI_BINARY = '/usr/local/bin/yuicompressor.sh'

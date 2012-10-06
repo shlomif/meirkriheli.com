@@ -1,3 +1,4 @@
 *.pyc
 build/*
 static/css/theme.css
+local_settings.py
