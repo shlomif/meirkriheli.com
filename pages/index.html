@@ -33,4 +33,5 @@ var disqus_config = function () {
 };
 </script>
   {% for post in posts %}{% include "blog/post_excerpt.html" %}{% endfor %}
+  <p><a href="{% i18n_url LANGUAGE_CODE blog_archive %}"><i class="icon-book"></i> {% trans "More posts at the archive" %}</a></p>
 {% endblock %}
