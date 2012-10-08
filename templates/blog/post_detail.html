@@ -21,7 +21,7 @@
     <ul class="post-tags">
         <li class="post-tags-title"><i class="icon-tags"></i> {% trans "Tags" %}:{{LANGUAGE_MARKER}}</li>
 {% for tag in object.tags.all %}
-        <li><a href="{{tag.get_absolute_url}}">{{ tag.name }}</a></li>
+        <li><a href="{{tag.get_absolute_url}}">{{ tag.name }}</a>{% if not forloop.last %},{{LANGUAGE_MARKER}}{% endif %}</li>
 {% endfor %}
     </ul>
     {% with object.get_translations as translations %}
