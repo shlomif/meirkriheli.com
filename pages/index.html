@@ -27,5 +27,10 @@
     </p>
   </section>
   {% get_recent_posts LANGUAGE_CODE POSTS_IN_INDEX as posts %}
+<script>
+var disqus_config = function () { 
+    this.language = "{{ LANGUAGE_CODE  }}";
+};
+</script>
   {% for post in posts %}{% include "blog/post_excerpt.html" %}{% endfor %}
 {% endblock %}

@@ -383,6 +383,16 @@
       a { display: block; font-size:1.5em; text-align: center; }
     }
   }
+
+  .post-excerpt { .clearfix; }
+  .post-image { 
+    float:left; margin:0 @gutter @gutter/2 0;
+    .box-shadow(-4px 4px 8px rgba(0,0,0, .25));
+    html[dir=rtl] & { 
+      float:right; margin: 0 0 @gutter/2 @gutter;
+      .box-shadow(4px 4px 8px rgba(0,0,0, .25));
+    }
+  }
 }
 
 body {
@@ -390,6 +400,7 @@ body {
 }
 
 #welcome {
+  margin-bottom: @gutter;
   p {
     padding-left: 50px;
     background: url("../img/meir_ltr.png") 0 2px no-repeat;
@@ -412,4 +423,8 @@ body.tags #page-tags {
   list-style: none;
   margin:0; padding:0;
   li { display: inline; }
+}
+
+.post-excerpt {
+  footer { margin-top: @gutter/2  }
 }

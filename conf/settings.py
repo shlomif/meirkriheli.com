@@ -27,6 +27,9 @@ SITE_ID = 1
 # In a Windows environment this must be set to your system time zone.
 TIME_ZONE = 'Israel'
 
+USE_I18N = True
+USE_L10N = True
+
 # Default Language code. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'he'

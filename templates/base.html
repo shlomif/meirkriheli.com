@@ -15,7 +15,7 @@
   <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{% static "img/apple-touch-icon-72x72-precomposed.png" %}">
   <link rel="apple-touch-icon-precomposed" href="{% static "img/apple-touch-icon-57x57-precomposed.png" %}">
   <link rel="shortcut icon" href="{% static "favicon.ico" %}">
-
+{% if object %}  <link rel="canonical" href="{{ object.get_absolute_url }}">{% endif %}
   {% compressed_css "meir" %}
   <script src="{% static "js/vendor/modernizr-2.6.1.min.js" %}"></script>
   {% block extra_head %}{% endblock %}
