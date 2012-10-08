@@ -1,4 +1,6 @@
 *.pyc
 build/*
 static/css/theme.css
+static/css/_elements.css
+static/css/_solarized.css
 local_settings.py
