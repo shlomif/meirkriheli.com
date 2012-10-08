@@ -1,0 +1,54 @@
+{% extends "base.html" %}{% load i18n disqus_tags %}
+
+{% block title %}{{ object.title }}{% endblock %}
+
+{% block description %}{{ object.excerpt }}{% endblock %}
+
+{% block body_class %}blog{% endblock %}
+
+{% block content %}
+<article class="blog-post">
+  <header>
+    <h1>{{ object.title }}</h1>
+    <div class="post-date">
+        <i class="icon-time"></i> {{LANGUAGE_MARKER}}
+        <time pubdate="{{object.pubdate|date:"c"}}">{{object.pubdate}}</time>
+    </div>
+  </header>
+{% if object.image %}  <div class="post-image"><img src="{{ STATIC_URL }}{{ object.image }}" alt="{{ object.title  }}" /></div>{% endif %}
+{{ object.content|safe }}
+  <footer>
+    <ul class="post-tags">
+        <li class="post-tags-title"><i class="icon-tags"></i> {% trans "Tags" %}:{{LANGUAGE_MARKER}}</li>
+{% for tag in object.tags.all %}
+        <li><a href="{{tag.get_absolute_url}}">{{ tag.name }}</a></li>
+{% endfor %}
+    </ul>
+    {% with object.get_translations as translations %}
+    {% if translations %}
+    <ul>
+      <li class="post-translations-title"><i class="icon-flag"></i> {% trans "Translations" %}:{{ LANGUAGE_MARKER }}</li>
+{% for tr in translations %}
+      <li><a href="{{ tr.get_absolute_url }}">{{ tr.title  }}</a></li>
+{% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <nav class="post-prev-next">
+    <ul>
+    {% with prev=object.get_previous next=object.get_next %}
+    {% if prev %}<li><a class="post-prev" href="{{prev.get_absolute_url}}"><i class="icon-circle-arrow-{{ LANGUAGE_START }}"></i> {{ prev.title }}</a></li>{% endif %}
+    {% if next %}<li><a class="post-next" href="{{next.get_absolute_url}}">{{ next.title }} <i class="icon-circle-arrow-{{ LANGUAGE_END }}"></i></a></li>{% endif %}
+    {% endwith %}
+    </ul>
+    </nav>
+  </footer>
+{% set_disqus_identifier object.slug "_" object.language %}
+<script>
+var disqus_config = function () { 
+    this.language = "{{ LANGUAGE_CODE  }}";
+};
+</script>
+{% disqus_show_comments %}
+</article>
+{% endblock %}

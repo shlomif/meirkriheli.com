@@ -244,7 +244,18 @@ body.tags #page-tags {
   margin: 0 auto;
 
   p {text-align: justify; }
+  header {
+    margin-bottom: @gutter;
+    h1 { margin:0 }
+    .post-date { font-size: 0.9em }  
+  }
   footer {
+    border-top: 1px solid @base2;
+    border-bottom: 1px solid @base2;
+    padding: @gutter/2 0;
+    margin: @gutter 0;
+    font-size: 0.9em;
+
     .clearfix;
     ul {
       list-style: none;
@@ -252,6 +263,23 @@ body.tags #page-tags {
     }
     li { display: inline; }
   }
+
+  .post-prev-next {
+    margin-top: @gutter/2;
+    padding-top: @gutter/2;
+    border-top: 1px solid @base2;
+    .clearfix;
+  }
+
+  .post-prev {
+    float:left;
+    html[dir=rtl] & { float:right; }
+   }
+
+  .post-next {
+    float:right;
+    html[dir=rtl] & { float:left; }
+   }
 }
 
 .post-excerpt {
