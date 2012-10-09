@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-03 00:13+0200\n"
-"PO-Revision-Date: 2012-10-03 00:14+0200\n"
+"POT-Creation-Date: 2012-10-09 10:38+0200\n"
+"PO-Revision-Date: 2012-10-09 10:38+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1)\n"
 
-#: conf/settings.py:36
+#: conf/settings.py:39
 msgid "English"
 msgstr ""
 
-#: conf/settings.py:38
+#: conf/settings.py:41
 msgid "Hebrew"
 msgstr ""
 
@@ -41,42 +41,54 @@ msgstr "ראשי"
 msgid "Meir Kriheli's web site"
 msgstr "האתר של מאיר קריחלי"
 
-#: pages/index.html:8
+#: pages/index.html:9
 msgid "Welcome"
 msgstr "ברוכים הבאים"
+
+#: pages/index.html:36
+msgid "More posts at the archive"
+msgstr ""
 
 #: pages/links.html:3
 msgid "Links"
 msgstr "קישורים"
 
-#: pages/links.html:5
+#: pages/links.html:5 pages/links.html.py:8
 msgid "Favorite Links"
 msgstr "קישורים מועדפים"
 
-#: pages/talks.html:3 pages/talks.html.py:5 pages/talks.html.py:8
+#: pages/talks.html:3
+msgid "Presentations"
+msgstr "מצגות"
+
+#: pages/talks.html:5 pages/talks.html.py:8
 msgid "Talks and Presentations"
 msgstr "הרצאות ומצגות"
 
-#: pages/toolbox.html:3
+#: pages/toolbox.html:3 pages/toolbox.html.py:8
 msgid "Toolbox"
 msgstr "ארגז כלים"
 
-#: pages/toolbox.html:5
+#: pages/toolbox.html:5 pages/toolbox.html.py:9
 msgid "Some of my favorite tools"
 msgstr "חלק מהכלים האהובים עלי"
 
-#: templates/base.html:37
+#: templates/base.html:47
 msgid "Archive"
 msgstr "ארכיון"
 
-#: templates/base.html:38
+#: templates/base.html:48 templates/blog/post_detail.html:22
 msgid "Tags"
 msgstr "תגים"
 
-#: templates/base.html:58 templates/base.html.py:61
+#: templates/base.html:81 templates/base.html.py:84
 msgid "Content licensed under"
 msgstr "התוכן תחת רישיון"
 
-#: templates/base.html:58 templates/base.html.py:62
+#: templates/base.html:81 templates/base.html.py:85
 msgid "Attribution-ShareAlike 3.0 Unported"
 msgstr "ייחוס-שיתוף זהה 3.0"
+
+#: templates/blog/post_detail.html:30
+msgid "Translations"
+msgstr ""

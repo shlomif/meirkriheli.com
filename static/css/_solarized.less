@@ -26,9 +26,12 @@
 
 .accentize(@accent) {
     a, a:active, a:visited, code.url { color: @accent; }
-    h1,h2,h3,h4,h5,h6 {color:@accent; text-shadow: @base1 1px 0px 1px;  }
+    h1,h2,h3,h4,h5,h6 {
+      color:@accent; text-shadow: @base00 1px 0px 1px;
+      a { text-shadow: none  }
+    }
     html[dir=rtl] & {
-      h1,h2,h3,h4,h5,h6 { text-shadow: @base1 -1px 0px 1px; }
+      h1,h2,h3,h4,h5,h6 { text-shadow: @base00 -1px 0px 1px; }
     }   
 }
 
