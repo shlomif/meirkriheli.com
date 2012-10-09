@@ -217,7 +217,10 @@
 
 body {
   background: @base3 url("../img/body_bg.png");
-  overflow-x : hidden; /* shareThis negativ left in RTL */
+}
+
+html[dir=rtl] {
+  overflow-x: hidden;      
 }
 
 #welcome {
@@ -297,3 +300,17 @@ pre {
   direction: ltr; text-align: left;
   .inner-shadow(8px, 8px, 8px, 0.3);
   white-space: pre; overflow: auto; padding: @gutter/2;}
+
+html[dir=rtl] {
+  #dsq-content ul, #dsq-content li, #dsq-content ol, #dsq-content cite,
+  #dsq-content div, #dsq-content table, #dsq-content td, #dsq-content th,
+  #dsq-content p, #dsq-content a, #dsq-content img, #dsq-content caption {
+    text-align: right; }
+  #dsq-content {
+    .dsq-options span { margin-right: 0; margin-left: 10px; }
+    .dsq-request-user-logout { float: left; }
+    .dsq-request-user-name { padding: 0.25em 0.5em 0 0; vertical-align: top; direction:ltr }
+    .dsq-post-footer .dsq-button { float: left; margin-right: 3px; margin-left:0;}
+    .dsq-attach-media { float: right;}
+  }
+}
