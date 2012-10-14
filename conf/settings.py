@@ -95,7 +95,7 @@ MEDUSA_DEPLOY_DIR = BUILD_DIR
 GOOGLE_ANALYTICS_ID = 'UA-26475861-1'
 
 # How many posts to show on the index page
-POSTS_IN_INDEX = 2
+POSTS_IN_INDEX = 4
 
 # disqus settings
 DISQUS_API_KEY = ''  # This is in my local settings
