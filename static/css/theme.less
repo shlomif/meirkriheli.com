@@ -92,7 +92,7 @@
   }
 }
 
-#talks { 
+#talks {
   .clearfix;
   article {
     margin: 20px 0; padding:20px 0;
@@ -105,23 +105,23 @@
     }
     div {
       .accentize(@base3);
-      a { 
+      a {
         display: inline-block; background-color: @orange;
         padding: @gutter/ 4 @gutter / 2; text-decoration: none;
         margin: 0 @gutter / 4;
         .rounded(10px); .box-shadow(0 0 5px rgba(0,0,0, 0.4));
         &:hover {text-decoration: underline}
       }
-    } 
-  } 
+    }
+  }
 }
 
 @media screen and (max-width: 799px) {
   #main-header {
     ul { padding:0; }
-    li { 
+    li {
       border-bottom:1px solid @base0;
-      padding:0; 
+      padding:0;
       a { padding: @gutter/2 @gutter; }
     }
     #main-menu { display: none;  }
@@ -156,7 +156,7 @@
     .box-shadow(0 5px 8px rgba(0,0,0, .8));
     html[dir=rtl] & { left:0; right:auto;  }
 
-    h1 { 
+    h1 {
       .rounded(10px);  width: 6em; float: left;
       html[dir=rtl] & { float:right; }
     }
@@ -170,7 +170,7 @@
     #main-menu { display: block  }
   }
 
-  #content { 
+  #content {
     padding: @gutter 0;
     max-width: 600px;
     margin: @gutter auto;
@@ -188,14 +188,14 @@
       text-align: inherit;
 
       html[dir=rtl] & {padding-left:0; padding: 0 200px 0 0;}
-      img { 
+      img {
         position: absolute; top:0; left:0;
         html[dir=rtl] & {left:auto; right:0;}
       }
       div { text-align: center  }
       h2 { margin: 0 0 @gutter / 2; font-size: 1em  }
       p { margin: 0 0 @gutter }
-    }   
+    }
   }
 
   #social-links {
@@ -203,7 +203,7 @@
     padding-top: @gutter/4;
     html[dir=rtl] & { float:left; }
     ul {
-      list-style: none; 
+      list-style: none;
       padding: 0;
       .clearfix;
     }
@@ -215,10 +215,10 @@
   }
 
   .post-excerpt { .clearfix; }
-  .post-image { 
+  .post-image {
     float:right; margin:0 0 @gutter @gutter;
     .box-shadow(-4px 4px 8px rgba(0,0,0, .25));
-    html[dir=rtl] & { 
+    html[dir=rtl] & {
       float:left; margin: 0 @gutter @gutter 0;
       .box-shadow(4px 4px 8px rgba(0,0,0, .25));
     }
@@ -232,7 +232,7 @@ body {
 }
 
 html[dir=rtl] {
-  overflow-x: hidden;      
+  overflow-x: hidden;
 }
 
 #welcome {
@@ -263,7 +263,7 @@ body.tags #page-tags {
   header {
     margin-bottom: @gutter;
     h1 { margin:0 }
-    .post-date { font-size: 0.9em }  
+    .post-date { font-size: 0.9em }
   }
   footer {
     border-top: 1px solid @base2;
@@ -308,7 +308,7 @@ body.tags #page-tags {
   footer { margin-top: @gutter/2  }
 }
 
-pre { 
+pre {
   direction: ltr; text-align: left;
   .inner-shadow(8px, 8px, 8px, 0.3);
   white-space: pre; overflow: auto; padding: @gutter/2;}
