@@ -324,5 +324,15 @@ html[dir=rtl] {
     .dsq-request-user-name { padding: 0.25em 0.5em 0 0; vertical-align: top; direction:ltr }
     .dsq-post-footer .dsq-button { float: left; margin-right: 3px; margin-left:0;}
     .dsq-attach-media { float: right;}
+    @dsq-margin: 30px;
+    .dsq-comment { margin-left:0;}
+    .dsq-depth-1 { margin-left:0 !important; margin-right: @dsq-margin;  }
+    .dsq-depth-2 { margin-left:0 !important; margin-right: @dsq-margin * 2;  }
+    .dsq-depth-3 { margin-left:0 !important; margin-right: @dsq-margin * 3;  }
+    .dsq-depth-4 { margin-left:0 !important; margin-right: @dsq-margin * 4;  }
+
+    .dsq-comment-hide-thread, .dsq-comment-show-thread {
+      left:0; right: auto; text-indent: 0;
+    }
   }
 }
