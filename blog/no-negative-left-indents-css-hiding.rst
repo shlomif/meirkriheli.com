@@ -48,7 +48,7 @@ in rtl but the width is still there, scrolling sideways in the Hebrew version
 will reveal the fact.
 
 There are solutions to those issues. For ``.popup`` above, just specifying the
-and negative ``top`` and not specifying ``left`` will do the same trick.
+negative ``top`` and removing ``left`` from css will have same effect.
 
 For ``.logo`` above I sometimes prefer:
 
