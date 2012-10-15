@@ -45,7 +45,7 @@ management for tens of thousands of servers.
 :lang: he
 :tags:  הרצאות|talks, Salt|salt, קוד פתוח|floss, פייתון|python
 :excerpt:
-    הרצאה אודות Salt Stack, כלי ניהול תצורה והרצת פעולות מרוחוקת, שהעברתי במסגרת
+    הרצאה אודות Salt Stack, כלי ניהול תצורה והרצת פעולות מרוחקות, שהעברתי במסגרת
     PyWeb-IL 36
 
 
