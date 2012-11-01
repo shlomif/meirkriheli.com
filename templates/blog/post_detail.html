@@ -26,7 +26,7 @@
     </ul>
     {% with object.get_translations as translations %}
     {% if translations %}
-    <ul>
+    <ul class="post-translations">
       <li class="post-translations-title"><i class="icon-flag"></i> {% trans "Translations" %}:{{ LANGUAGE_MARKER }}</li>
 {% for tr in translations %}
       <li><a href="{{ tr.get_absolute_url }}">{{ tr.title  }}</a></li>
