@@ -214,7 +214,6 @@
     }
   }
 
-  .post-excerpt { .clearfix; }
   .post-image {
     float:right; margin:0 0 @gutter @gutter;
     .box-shadow(-4px 4px 8px rgba(0,0,0, .25));
@@ -307,7 +306,10 @@ body.tags #page-tags {
 }
 
 .post-excerpt {
+  .clearfix;
   margin: @gutter 0;
+  padding-bottom: @gutter;
+  border-bottom: 1px solid @base2;
   footer { margin-top: @gutter/2  }
 }
 
