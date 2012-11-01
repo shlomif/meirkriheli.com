@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="Docutils 0.8.1: http://docutils.sourceforge.net/" />
+<meta name="version" content="S5 1.1" />
+<title>MongoDB</title>
+<style type="text/css">
+
+.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #ffffff; }
+.highlight .c { color: #808080 } /* Comment */
+.highlight .err { color: #F00000; background-color: #F0A0A0 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #303030 } /* Operator */
+.highlight .cm { color: #808080 } /* Comment.Multiline */
+.highlight .cp { color: #507090 } /* Comment.Preproc */
+.highlight .c1 { color: #808080 } /* Comment.Single */
+.highlight .cs { color: #cc0000; font-weight: bold } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #808080 } /* Generic.Output */
+.highlight .gp { color: #c65d09; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0040D0 } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #003080; font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #303090; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #6000E0; font-weight: bold } /* Literal.Number */
+.highlight .s { background-color: #fff0f0 } /* Literal.String */
+.highlight .na { color: #0000C0 } /* Name.Attribute */
+.highlight .nb { color: #007020 } /* Name.Builtin */
+.highlight .nc { color: #B00060; font-weight: bold } /* Name.Class */
+.highlight .no { color: #003060; font-weight: bold } /* Name.Constant */
+.highlight .nd { color: #505050; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #800000; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #F00000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0060B0; font-weight: bold } /* Name.Function */
+.highlight .nl { color: #907000; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #0e84b5; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #007000 } /* Name.Tag */
+.highlight .nv { color: #906030 } /* Name.Variable */
+.highlight .ow { color: #000000; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #6000E0; font-weight: bold } /* Literal.Number.Float */
+.highlight .mh { color: #005080; font-weight: bold } /* Literal.Number.Hex */
+.highlight .mi { color: #0000D0; font-weight: bold } /* Literal.Number.Integer */
+.highlight .mo { color: #4000E0; font-weight: bold } /* Literal.Number.Oct */
+.highlight .sb { background-color: #fff0f0 } /* Literal.String.Backtick */
+.highlight .sc { color: #0040D0 } /* Literal.String.Char */
+.highlight .sd { color: #D04020 } /* Literal.String.Doc */
+.highlight .s2 { background-color: #fff0f0 } /* Literal.String.Double */
+.highlight .se { color: #606060; font-weight: bold; background-color: #fff0f0 } /* Literal.String.Escape */
+.highlight .sh { background-color: #fff0f0 } /* Literal.String.Heredoc */
+.highlight .si { background-color: #e0e0e0 } /* Literal.String.Interpol */
+.highlight .sx { color: #D02000; background-color: #fff0f0 } /* Literal.String.Other */
+.highlight .sr { color: #000000; background-color: #fff0ff } /* Literal.String.Regex */
+.highlight .s1 { background-color: #fff0f0 } /* Literal.String.Single */
+.highlight .ss { color: #A06000 } /* Literal.String.Symbol */
+.highlight .bp { color: #007020 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #306090 } /* Name.Variable.Class */
+.highlight .vg { color: #d07000; font-weight: bold } /* Name.Variable.Global */
+.highlight .vi { color: #3030B0 } /* Name.Variable.Instance */
+.highlight .il { color: #0000D0; font-weight: bold } /* Literal.Number.Integer.Long */
+
+</style>
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+<link rel="stylesheet" href="ui/default/slides.css"
+      type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css"
+      type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css"
+      type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css"
+      type="text/css" media="projection" id="operaFix" />
+
+<style type="text/css">
+#currentSlide {display: none;}
+</style>
+</head>
+<body>
+<div class="layout">
+<div id="controls"></div>
+<div id="currentSlide"></div>
+<div id="header">
+
+</div>
+<div id="footer">
+<h1>MongoDB</h1>
+<h2>Perl Mongers TLV Oct 2012</h2>
+</div>
+</div>
+<div class="presentation">
+<div class="slide" id="slide0">
+<h1 class="title">MongoDB</h1>
+
+<p>&quot;hu <strong>mongo</strong> us&quot;</p>
+<p>Document-oriented database</p>
+
+</div>
+<div class="slide" id="no-nosql-for-you">
+<h1>No NoSQL for you!</h1>
+<p>Come back next year:</p>
+<ul class="simple">
+<li>Document</li>
+<li>Key/Value</li>
+<li>Tabular</li>
+<li>Object</li>
+<li>Graph</li>
+<li><a class="reference external" href="http://en.wikipedia.org/wiki/NoSQL">And more</a> ...</li>
+</ul>
+</div>
+<div class="slide" id="features">
+<h1>Features</h1>
+<ul class="simple">
+<li>Document oriented</li>
+<li>Schema less (sort of)</li>
+<li>Indexing (on any attribute and depth)</li>
+<li>Replication</li>
+<li>Document based querying</li>
+<li>In-place updates</li>
+<li>Map/Reduce</li>
+</ul>
+</div>
+<div class="slide" id="brownie-points">
+<h1>Brownie Points</h1>
+<ul class="simple">
+<li>Auto Sharding</li>
+<li>GridFS</li>
+<li>Geospatial Indexing and querying</li>
+<li>Easy getting started</li>
+</ul>
+</div>
+<div class="slide" id="scale-and-trade-offs">
+<h1>Scale and trade offs</h1>
+<ul class="simple">
+<li>Scale Up vs. Scale Out</li>
+<li>Joins are problematic</li>
+<li>So are transactions</li>
+<li>MongoDB sacrifices those to Scale Out</li>
+</ul>
+</div>
+<div class="slide" id="bson-json">
+<h1>BSON/JSON</h1>
+<ul class="simple">
+<li>Scanability</li>
+<li>Custom types</li>
+</ul>
+</div>
+<div class="slide" id="json-data-types">
+<h1>JSON data types</h1>
+<ul class="simple">
+<li>object (dict/hash)</li>
+<li>array</li>
+<li>string</li>
+<li>number</li>
+<li>boolean (true/false)</li>
+<li>null</li>
+</ul>
+</div>
+<div class="slide" id="bson-extra-types">
+<h1>BSON extra types</h1>
+<ul class="simple">
+<li>ObjectID</li>
+<li>DateTime</li>
+<li>BinData</li>
+<li>DBRef</li>
+</ul>
+</div>
+<div class="slide" id="hello-schemaless">
+<h1>Hello schemaless</h1>
+<p>Just like discovering dynamic languages for the 1st time (plus it maps smoothly to
+dynamic languages).</p>
+<p>Not exactly schema less (more of dynamic one):</p>
+<ul class="simple">
+<li>Collection Indexes</li>
+<li>Each document has structure</li>
+</ul>
+<p>Collections are created as needed (on write).</p>
+</div>
+<div class="slide" id="documents">
+<h1>Documents</h1>
+<ul class="simple">
+<li>Grouped by collections</li>
+<li>A document is JSON object (dict/hash) of key/value pairs</li>
+<li>Values can be arrays, other objects and valid data types</li>
+</ul>
+</div>
+<div class="slide" id="example-document">
+<h1>Example document</h1>
+<div class="highlight"><pre><span class="p">{</span>
+  <span class="nx">_id</span><span class="o">:</span> <span class="s2">&quot;September 19th, 2012&quot;</span><span class="p">,</span>
+  <span class="nx">talks</span><span class="o">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nx">title</span><span class="o">:</span>  <span class="s2">&quot;Meta-Moose&quot;</span><span class="p">,</span>
+      <span class="nx">lecturer</span><span class="o">:</span> <span class="s2">&quot;Ynon Perek&quot;</span><span class="p">,</span>
+      <span class="nx">description</span><span class="o">:</span> <span class="s2">&quot;Using the meta object, dyna ...&quot;</span>
+      <span class="nx">slides</span><span class="o">:</span> <span class="s2">&quot;http://www.slideshare.net/YnonPerek/metamoose-14339965&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nx">title</span><span class="o">:</span> <span class="s2">&quot;Project Euler&quot;</span><span class="p">,</span>
+      <span class="nx">lecturer</span><span class="o">:</span> <span class="s2">&quot;Shlomi Fish&quot;</span><span class="p">,</span>
+    <span class="p">},</span> <span class="p">{</span> <span class="p">...</span> <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="slide" id="id">
+<h1>_id</h1>
+<ul class="simple">
+<li>Needed (except for system &amp; capped collections)</li>
+<li>Immutable, Unique within a collection</li>
+<li>Any type, other than arrays,</li>
+<li>Will be assigned implicitly an ObjectID if missing.</li>
+<li>Auto indexed</li>
+</ul>
+</div>
+<div class="slide" id="mongo-shell">
+<h1>mongo shell</h1>
+<p>Basically a JS shell. Let's play with it a bit.</p>
+</div>
+<div class="slide" id="querying">
+<h1>Querying</h1>
+<div class="highlight"><pre><span class="nx">db</span><span class="p">.</span><span class="nx">products</span><span class="p">.</span><span class="nx">find</span><span class="p">({</span><span class="s1">&#39;type&#39;</span><span class="o">:</span> <span class="s1">&#39;case&#39;</span><span class="p">})</span>
+</pre></div>
+<p>Find all documents in collection products where type is &quot;case&quot; (even if type is
+an array).</p>
+</div>
+<div class="slide" id="advanced">
+<h1>Advanced</h1>
+<p>Many <a class="reference external" href="http://www.mongodb.org/display/DOCS/Advanced+Queries">query operators</a>, like</p>
+<ul class="simple">
+<li>$gt, $gte, $lt, $lte, $ne,$mod</li>
+<li>$all, $in, $nin</li>
+<li>$exists</li>
+<li>$nor, $or $and</li>
+<li>$size, $type</li>
+<li>RegEx</li>
+</ul>
+</div>
+<div class="slide" id="updates">
+<h1>Updates</h1>
+<p>Some of the <a class="reference external" href="http://www.mongodb.org/display/DOCS/Updating">update operators</a> (in addition to save() ):</p>
+<ul class="simple">
+<li>$inc</li>
+<li>$set, $unset</li>
+<li>$push,  $pushAll, $pop, $pull, $pullAll</li>
+<li>$addToSet and $each</li>
+<li>$rename</li>
+<li>$bit</li>
+</ul>
+</div>
+<div class="slide" id="programming-languages">
+<h1>Programming Languages</h1>
+<p>Has official support for many languages:</p>
+<blockquote>
+C, C++, C# / .NET,
+Erlang, Haskell, Java, JavaScript,
+Lisp, node.JS, Perl, PHP,
+Python, Ruby, Scala</blockquote>
+<p>Plus few unofficial ones.</p>
+<p>For Perl, there's <a class="reference external" href="http://search.cpan.org/~friedo/MongoDB/">MongoDB at CPAN</a></p>
+</div>
+<div class="slide" id="perl-example">
+<h1>Perl example</h1>
+<div class="highlight"><pre><span class="k">use</span> <span class="n">MongoDB</span><span class="p">;</span>
+
+<span class="k">my</span> <span class="nv">$conn</span> <span class="o">=</span> <span class="nn">MongoDB::</span><span class="n">Connection</span><span class="o">-&gt;</span><span class="k">new</span><span class="p">;</span>
+<span class="k">my</span> <span class="nv">$catalog_db</span> <span class="o">=</span> <span class="nv">$conn</span><span class="o">-&gt;</span><span class="n">pcat</span><span class="p">;</span>  <span class="c1"># pcat db</span>
+
+<span class="k">my</span> <span class="nv">$products</span> <span class="o">=</span> <span class="nv">$catalog_db</span><span class="o">-&gt;</span><span class="n">products</span><span class="p">;</span>  <span class="c1"># products collection</span>
+
+<span class="k">my</span> <span class="nv">$services</span> <span class="o">=</span> <span class="nv">$products</span><span class="o">-&gt;</span><span class="n">find</span><span class="p">({</span><span class="n">type</span> <span class="o">=&gt;</span> <span class="s">&quot;service&quot;</span><span class="p">});</span> <span class="c1"># we get a cursor</span>
+
+<span class="k">while</span> <span class="p">(</span><span class="k">my</span> <span class="nv">$service</span> <span class="o">=</span> <span class="nv">$services</span><span class="o">-&gt;</span><span class="k">next</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">print</span> <span class="nv">$service</span><span class="o">-&gt;</span><span class="p">{</span><span class="s">&#39;_id&#39;</span><span class="p">}</span> <span class="o">.</span> <span class="s">&#39;, &#39;</span> <span class="o">.</span> <span class="nv">$service</span><span class="o">-&gt;</span><span class="p">{</span><span class="s">&#39;name&#39;</span><span class="p">}</span> <span class="o">.</span> <span class="s">&quot;\n&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="slide" id="insert">
+<h1>Insert</h1>
+<div class="highlight"><pre><span class="nv">$products</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">({</span>
+    <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&quot;Dummy box&quot;</span><span class="p">,</span> <span class="n">type</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s">&quot;service&quot;</span><span class="p">,</span> <span class="s">&quot;dummy&quot;</span><span class="p">]</span>
+<span class="p">});</span>
+
+<span class="c1"># or</span>
+
+<span class="nv">$catalog_db</span><span class="o">-&gt;</span><span class="n">products</span><span class="o">-&gt;</span><span class="n">insert</span><span class="p">({</span>
+    <span class="n">name</span> <span class="o">=&gt;</span> <span class="s">&quot;Dummy box&quot;</span><span class="p">,</span> <span class="n">type</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="s">&quot;service&quot;</span><span class="p">,</span> <span class="s">&quot;dummy&quot;</span><span class="p">]</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<div class="slide" id="update">
+<h1>Update</h1>
+<div class="highlight"><pre><span class="c1"># For type service increment price by 20, set the raised flag</span>
+
+<span class="nv">$products</span><span class="o">-&gt;</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span><span class="n">type</span> <span class="o">=&gt;</span> <span class="s">&quot;service&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">&#39;$inc&#39;</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="n">monthly_price</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">},</span>  <span class="p">{</span><span class="s">&#39;$set&#39;</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="n">raised</span> <span class="o">=&gt;</span> <span class="mi">1</span><span class="p">}}</span> <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+<div class="highlight"><pre><span class="c1"># with boolean. To get booleans set $MongoDB::BSON::use_boolean to 1</span>
+
+<span class="k">use</span> <span class="n">boolean</span><span class="p">;</span>
+<span class="nv">$products</span><span class="o">-&gt;</span><span class="n">update</span><span class="p">(</span>
+    <span class="p">{</span><span class="n">type</span> <span class="o">=&gt;</span> <span class="s">&quot;service&quot;</span><span class="p">},</span>
+    <span class="p">{</span><span class="s">&#39;$inc&#39;</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="n">monthly_price</span> <span class="o">=&gt;</span> <span class="mi">20</span><span class="p">},</span>  <span class="p">{</span><span class="s">&#39;$set&#39;</span> <span class="o">=&gt;</span> <span class="p">{</span><span class="n">raised</span> <span class="o">=&gt;</span><span class="n">true</span><span class="p">}}</span> <span class="p">}</span>
+<span class="p">);</span>
+</pre></div>
+</div>
+<div class="slide" id="capped-collections">
+<h1>Capped collections</h1>
+<p>Let's talk a bit about capped collections and tailabile cursors.</p>
+<div class="highlight"><pre><span class="k">my</span> <span class="nv">$cursor</span> <span class="o">=</span> <span class="nv">$coll</span><span class="o">-&gt;</span><span class="n">find</span><span class="o">-&gt;</span><span class="n">tailable</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<span class="k">for</span> <span class="p">(;;)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">defined</span><span class="p">(</span><span class="k">my</span> <span class="nv">$doc</span> <span class="o">=</span> <span class="nv">$cursor</span><span class="o">-&gt;</span><span class="k">next</span><span class="p">))</span> <span class="p">{</span>
+        <span class="n">say</span> <span class="nv">$doc</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="nb">sleep</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="slide" id="something-from-the-trenches">
+<h1>Something from the trenches</h1>
+<ul class="simple">
+<li>Think about and design your data structure</li>
+<li>Don't use MongoDB &lt; 2.0 (2.2 is recommended)</li>
+<li>Deploy servers on 64 bits (little endian is mandatory)</li>
+<li>16MB Document size limit</li>
+<li>Don't <tt class="docutils literal">kill <span class="pre">-9</span> mongod</tt></li>
+</ul>
+</div>
+<div class="slide" id="resources">
+<h1>Resources</h1>
+<ul class="simple">
+<li><a class="reference external" href="http://www.mongodb.org/">MongoDB</a></li>
+<li><a class="reference external" href="http://www.mongodb.org/display/DOCS/Home">MondoDB documentation</a></li>
+<li><a class="reference external" href="http://search.cpan.org/~friedo/MongoDB/">MongoDB at CPAN</a></li>
+<li><a class="reference external" href="http://openmymind.net/2011/3/28/The-Little-MongoDB-Book/">The Little MongoDB Book</a></li>
+</ul>
+</div>
+<div class="slide" id="thank-you">
+<h1>Thank you</h1>
+<ul class="simple">
+<li>Meir Kriheli</li>
+<li><a class="reference external" href="http://meirkriheli.com">http://meirkriheli.com</a></li>
+<li><a class="reference external" href="mailto:mkriheli&#64;gmail.com">mkriheli&#64;gmail.com</a></li>
+</ul>
+</div>
+</div>
+</body>
+</html>
