@@ -38,8 +38,8 @@ I gave a talk about it and it's usage with Perl during
 :lang: he
 :tags:  הרצאות|talks, MongoDB|mongodb, קוד פתוח|floss, פרל|Perl
 :excerpt:
-    הרצאה אודות בסיס הנתונים MongoDB אשר העברתי במסגרת 
-    במפגש שוחרי פרל ת"א אוקטובר 2012.
+    הרצאה אודות בסיס הנתונים MongoDB אשר העברתי במסגרת
+    מפגש שוחרי פרל ת"א אוקטובר 2012.
 
 MongoDB_ הוא בסיס נתונים מוכוון מסמכים, סקאלאבילי, מהיר ביצועים, בקוד פתוח אשר
 נכתב ב-C++.
