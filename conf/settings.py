@@ -131,6 +131,7 @@ PIPELINE_JS = {
         'source_filenames': (
             'js/main.js',
             'js/plugins.js',
+            'js/vendor/respond.min.js',
         ),
         'output_filename': 'js/bundle.js',
     }
