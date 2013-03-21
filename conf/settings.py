@@ -101,9 +101,6 @@ POSTS_IN_INDEX = 4
 DISQUS_API_KEY = ''  # This is in my local settings
 DISQUS_WEBSITE_SHORTNAME = 'meirkriheli'
 
-# django-pipline settings
-PIPELINE_YUI_BINARY = '/usr/local/bin/yuicompressor.sh'
-
 PIPELINE_COMPILERS = (
     'pipeline.compilers.less.LessCompiler',
 )
