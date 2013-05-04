@@ -114,6 +114,7 @@ PIPELINE_CSS = {
         'source_filenames': (
             'css/normalize.css',
             'css/normalize_rtl.css',
+            'css/jquery.bxslider.css',
             'css/main.css',
             'css/font-awesome.less',
             'css/syntax.less',
@@ -129,6 +130,7 @@ PIPELINE_JS = {
             'js/main.js',
             'js/plugins.js',
             'js/vendor/respond.min.js',
+            'js/vendor/jquery.bxslider.min.js',
         ),
         'output_filename': 'js/bundle.js',
     }

@@ -6,5 +6,15 @@
 
 			return false;
 		});
+
+		$('.bxslider li img').each(function() {
+			$(this).attr('title', $(this).attr('alt'));
+		});
+		$('.bxslider').bxSlider({
+			captions: true,
+			auto: true,
+			autoStart: false,
+			autoControls: true
+		});
 	})
 })(jQuery);
