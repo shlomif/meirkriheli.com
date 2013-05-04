@@ -256,7 +256,7 @@ body.tags #page-tags {
   a {color:@orange;}
 }
 
-.blog-post {
+#content .blog-post {
   max-width: 600px;
   margin: 0 auto;
 
@@ -280,7 +280,17 @@ body.tags #page-tags {
     }
     li { display: inline; }
 
-    .post-tags { border-bottom: 1px solid @base2; padding-bottom: @gutter/2;}
+    .post-tags { 
+        border-bottom: 1px solid @base2; padding-bottom: @gutter/2;
+        a {
+          color: @base3;
+          display: inline-block; background-color: @orange;
+          padding: 0 5px; text-decoration: none;
+          margin: 0 2px;
+          .rounded(8px); 
+          &:hover {text-decoration: underline}
+        }
+    }
     .post-translations {  padding-top: @gutter/2; }
   }
 
@@ -342,4 +352,13 @@ html[dir=rtl] {
       left:0; right: auto; text-indent: 0;
     }
   }
+}
+
+.bx-wrapper { 
+    direction: ltr;
+
+    ul { margin:0; padding: 0; }
+    .bx-caption {
+      span { font-family: inherit; font-size: 1em;  }
+    }
 }
