@@ -19,7 +19,7 @@ Marketing won't hurt your project
     specially in a crowded niche. 
 
 
-Your project starts as an itch, and you've scratched it. It's growing at an
+Your project starts as an itch, and you've scratched it. It's growing at a
 healthy rate. But wait, while development is the most important aspect of Open
 Source and Free Software projects, don't neglect marketing efforts, small effort
 can yield quite a gain.
