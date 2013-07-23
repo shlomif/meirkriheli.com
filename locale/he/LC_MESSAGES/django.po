@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-10-09 10:38+0200\n"
-"PO-Revision-Date: 2012-10-09 10:38+0200\n"
+"POT-Creation-Date: 2013-07-23 17:40+0300\n"
+"PO-Revision-Date: 2013-07-23 17:41+0300\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -74,8 +74,8 @@ msgid "Some of my favorite tools"
 msgstr "חלק מהכלים האהובים עלי"
 
 #: templates/base.html:47
-msgid "Archive"
-msgstr "ארכיון"
+msgid "Blog"
+msgstr "בלוג"
 
 #: templates/base.html:48 templates/blog/post_detail.html:22
 msgid "Tags"
@@ -92,3 +92,6 @@ msgstr "ייחוס-שיתוף זהה 3.0"
 #: templates/blog/post_detail.html:30
 msgid "Translations"
 msgstr ""
+
+#~ msgid "Archive"
+#~ msgstr "ארכיון"

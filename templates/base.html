@@ -44,7 +44,7 @@
         <ul>
             <li id="page-{{ index_page.slug }}"><a href="{{ index_page.get_absolute_url }}"><i class="icon-home"></i> {{ index_page.title }}</a></li>
             <li id="page-{{ talks_page.slug }}"><a href="{{ talks_page.get_absolute_url }}"><i class="icon-eye-open"></i> {{ talks_page.title }}</a></li>
-            <li id="page-archive"><a href="{% i18n_url LANGUAGE_CODE blog_archive %}"><i class="icon-list-ul"></i> {% trans "Archive" %}</a>
+            <li id="page-archive"><a href="{% i18n_url LANGUAGE_CODE blog_archive %}"><i class="icon-list-ul"></i> {% trans "Blog" %}</a>
             <li id="page-tags"><a href="{% i18n_url LANGUAGE_CODE blog_tags %}"><i class="icon-tags"></i> {% trans "Tags" %}</a>
             <li id="page-{{ toolbox_page.slug }}"><a href="{{ toolbox_page.get_absolute_url }}"><i class="icon-cogs"></i> {{ toolbox_page.title }}</a></li>
             <li id="page-{{ links_page.slug }}"><a href="{{ links_page.get_absolute_url }}"><i class="icon-link"></i> {{ links_page.title }}</a></li>
