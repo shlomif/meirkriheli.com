@@ -9,11 +9,11 @@
 {% block content %}
 <article class="blog-post">
   <header>
-    <h1>{{ object.title }}</h1>
     <div class="post-date">
         <i class="icon-time"></i> {{LANGUAGE_MARKER}}
         <time pubdate="{{object.pubdate|date:"c"}}">{{object.pubdate}}</time>
     </div>
+    <h1>{{ object.title }}</h1>
   </header>
 {% if object.image %}  <div class="post-image"><img src="{{ STATIC_URL }}{{ object.image }}" alt="{{ object.title  }}" /></div>{% endif %}
 {{ object.content|safe }}
