@@ -78,7 +78,7 @@ and `Ninja IDE`_.  As an added bonus I've included the `Linux kernel`_ page.
 * .. image:: /img/posts/marketing-project/netbeans.png
     :alt: NetBeans
 * .. image:: /img/posts/marketing-project/ruby.png
-    :alt: NetBeans
+    :alt: Ruby
 * .. image:: /img/posts/marketing-project/go.png
     :alt: Go
 * .. image:: /img/posts/marketing-project/ninja.png
@@ -193,7 +193,7 @@ LLVM_ לדוגמא:
 * .. image:: /img/posts/marketing-project/netbeans.png
     :alt: NetBeans
 * .. image:: /img/posts/marketing-project/ruby.png
-    :alt: NetBeans
+    :alt: Ruby
 * .. image:: /img/posts/marketing-project/go.png
     :alt: Go
 * .. image:: /img/posts/marketing-project/ninja.png
