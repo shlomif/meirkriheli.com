@@ -6,6 +6,17 @@
 @sidebar-width: 300px;
 
 
+/* Tag mixin */
+.tag-mixin {
+    color: @base3;
+    display: inline-block; background-color: @orange;
+    padding: 0 5px; text-decoration: none;
+    margin: 0 2px;
+    .rounded(8px); 
+    &:hover {text-decoration: underline}
+    &:visited { color: @base3;  }
+  }
+
 #without-footer {
   position: relative;
 }
@@ -274,7 +285,7 @@ body.tags #page-tags {
     font-size: 0.9em;
 
     .clearfix;
-    ul {
+    ul  {
       list-style: none;
       margin:0; padding:0;
     }
@@ -282,14 +293,7 @@ body.tags #page-tags {
 
     .post-tags { 
         border-bottom: 1px solid @base2; padding-bottom: @gutter/2;
-        a {
-          color: @base3;
-          display: inline-block; background-color: @orange;
-          padding: 0 5px; text-decoration: none;
-          margin: 0 2px;
-          .rounded(8px); 
-          &:hover {text-decoration: underline}
-        }
+        a { .tag-mixin }
     }
     .post-translations {  padding-top: @gutter/2; }
   }
@@ -324,6 +328,24 @@ body.tags #page-tags {
   border-bottom: 1px solid @base2;
   footer { margin-top: @gutter/2  }
 }
+
+
+#content ul.tags-cloud {
+    list-style: none;
+    margin:0; padding:0;
+    text-align: justify;
+
+    li { display: inline-block; padding: 0.5ex; vertical-align: middle; }
+    a { 
+        .tag-mixin;
+    }
+    .tag-2 { font-size: 1.2em; background-color: @red; }
+    .tag-3 { font-size: 1.4em; background-color: @yellow; }
+    .tag-4 { font-size: 1.6em; background-color: @blue; }
+    .tag-5 { font-size: 1.8em; background-color: @cyan; }
+    .tag-6 { font-size: 2em; background-color: @green; }
+}
+
 
 pre {
   direction: ltr; text-align: left;
