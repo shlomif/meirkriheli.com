@@ -49,6 +49,7 @@
 var disqus_config = function () { 
     this.language = "{{ LANGUAGE_CODE  }}";
 };
+var disqus_url = 'http://{{site.domain}}{{object.get_absolute_url}}';
 </script>
 {% disqus_show_comments %}
 </article>
