@@ -6,6 +6,14 @@
 
 {% block body_class %}blog{% endblock %}
 
+{% block extra_head %}
+    <meta property="og:title" content="{{object.title}}">   
+    <meta property="og:description" content="{{object.excerpt}}">   
+    {% if object.image %}
+    <meta property="og:image" content="{{ STATIC_URL }}{{object.image}}">   
+    {% endif %}
+{% endblock %}
+
 {% block content %}
 <article class="blog-post">
   <header>
