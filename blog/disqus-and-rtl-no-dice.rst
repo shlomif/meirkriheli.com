@@ -16,8 +16,14 @@ Disqus and RTL: No dice
     With the new Disqus that's not an option any more.
 
 
+
 The previous Disqus added the content of the commenting system into the
 page's DOM, which allowed overriding and adjusting the CSS.
+
+    **Update**: `Disqus' RTL support is implemented now`_
+
+.. _Disqus' RTL support is implemented now: /en/2013/09/disqus-got-rtl/
+
 
 Since this web site is bilingual, the other language being Hebrew, I've
 used CSS to properly lay out the elements for Right-to-left_ (RTL). Here's the
@@ -82,6 +88,10 @@ Disqus ותמיכה בדו־כיווניות: לא בבית ספרנו
 
 Disqus הישן הוסיף את תוכן מערכת התגובות ל-DOM של העמוד, מה שאפשר שינויים והתאמות
 בעזרת CSS.
+
+    **עדכון**: `Disqus תומכת כעת בדו-כיווניות`_
+
+.. _Disqus תומכת כעת בדו-כיווניות: /2013/09/disqus-got-rtl/
 
 מאחר ואתר זה הוא דו־לשוני, עברית ואנגלית, השתמשתי ב־CSS להתאמת מערכת
 התגובות כאשר הכיווניות היא ימין־שמאל. הנה קוד ה־`lesscss` אשר שימש אותי לכך:
