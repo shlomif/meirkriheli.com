@@ -9,14 +9,14 @@ Disqus got RTL
 =============================================================
 
 :lang: en
-:tags: RTL, Hebrew, Translation, Disqus, FLOSS|floss 
+:tags: BiDi, Hebrew, Translation, Disqus, FLOSS|floss 
 :excerpt:       
-    A couple of months ago I've wrote about the missing RTL support for the new 
+    A couple of months ago I've wrote about missing RTL support for the new 
     Disqus. That support has been implemented since then, with one little nagging
     translation issue remaining.
 
 
-A couple of months ago I've wrote about the 
+A couple of months ago I've wrote about
 `missing RTL support for the new Disqus`_.
 
 **Disqus implemented RTL support since then**, there were several small issues,
@@ -46,14 +46,14 @@ Disqus תומכת ב-RTL
 =============================================================
 
 :lang: he
-:tags:  דו-כיווניות|rtl, עברית|hebrew, תרגום|translation, Disqus, קוד פתוח|floss
+:tags:  דו-כיווניות|bidi, עברית|hebrew, תרגום|translation, Disqus, קוד פתוח|floss
 :excerpt:
     לפני כחודשיים כתבתי אודות חוסר התמיכה של Disqus בדו־כיווניות בממשק החדש
     שלהם. התמיכה בנושא הושלמה מאז, וכעת נותר מונח מתורגם קטן אשר מציק.
 
 לפני כחודשיים כתבתי `אודות חוסר התמיכה של Disqus בדו־כיווניות בממשק החדש`_.
 
-.. _אודות חוסר התמיכה של Disqus בדו־כיווניות בממשק החדש: /en/2013/07/disqus-and-rtl-no-dice/
+.. _אודות חוסר התמיכה של Disqus בדו־כיווניות בממשק החדש: /2013/07/disqus-and-rtl-no-dice/
 
 **ממשק התגובות של Disqus תומך כעת בדו־כיווניות**. היו מספר בעיות קטנות, כמו
 שבירת העימוד בהתקנים ניידים, אשר טופלו. תודה רבה לצוות של Disqus!

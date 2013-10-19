@@ -9,7 +9,7 @@ Stop using negative left or text indents for css hiding
 =============================================================
 
 :lang: en
-:tags: FLOSS|floss, RTL, css
+:tags: FLOSS|floss, BiDi, css
 :excerpt:
     Using Negative left or text-indent for hiding in CSS is problematic when the
     direction is rtl, there's an alternative.
@@ -75,7 +75,7 @@ This will keep the text below the height, and since ``overflow`` is
 =====================================================================
 
 :lang: he
-:tags:  קוד פתוח|floss, דו-כיווניות|rtl, css
+:tags:  קוד פתוח|floss, דו-כיווניות|bidi, css
 :excerpt:
     שימוש ב-left או text-indent שליליים להסתרת אלמנטים ב-css היא בעייתית כאשר
     הכיווניות היא מימין לשמאל, ישנה אפשרות אחרת.

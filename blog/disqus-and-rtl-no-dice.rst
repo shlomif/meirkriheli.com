@@ -9,7 +9,7 @@ Disqus and RTL: No dice
 =============================================================
 
 :lang: en
-:tags: RTL, Hebrew, Translation, Disqus, FLOSS|floss 
+:tags: BiDi, Hebrew, Translation, Disqus, FLOSS|floss 
 :excerpt:
     Old Disqus added the content to the page, thus allowing customization of the
     comments system, which is what I've done for proper Right-to-left layout.
@@ -81,7 +81,7 @@ Disqus ותמיכה בדו־כיווניות: לא בבית ספרנו
 =============================================================
 
 :lang: he
-:tags:  דו-כיווניות|rtl, עברית|hebrew, תרגום|translation, Disqus, קוד פתוח|floss
+:tags:  דו-כיווניות|bidi, עברית|hebrew, תרגום|translation, Disqus, קוד פתוח|floss
 :excerpt:
     Disqus הישן הוסיף את התוכן לעמוד, מה שאפשר התאמה של מערכת התגובות, תכונה
     שניצלתי להתאמת התצוגה בכיווניות ימין־שמאל. ה־Disqus החדש ביטל את היכולת הזו.
