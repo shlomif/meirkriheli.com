@@ -7,4 +7,41 @@
 {% block content %}
   <h1>{% trans "Toolbox" %}</h1>
   <p>{% trans "Some of my favorite tools" %}:</p>
+
+{% if LANGUAGE_CODE  == "he" %}
+    <ul>
+        <li>
+            <a href="http://www.vim.org/">VIM</a>: ראו את ההגדרות שלי בגיטהאב ־ <a href="https://github.com/MeirKriheli/dotvim">dotvim</a>
+        </li>
+        <li><a href="https://www.archlinux.org/">Arch Linux</a></li>
+        <li><a href="http://www.python.org/">פייתון</a></li>
+        <li><a href="http://golang.org/">Go</a></li>
+        <li><a href="http://www.postgresql.org/">PostgreSQL</a></li>
+        <li><a href="http://www.mongodb.org/">MongoDB</a></li>
+        <li><a href="https://www.djangoproject.com/">Django</a></li>
+        <li><a href="http://www.tornadoweb.org/">Tornado</a></li>
+        <li><a href="http://sphinx-doc.org/">Sphinx</a></li>
+        <li><a href="http://emberjs.com/">Ember</a></li>
+        <li><a href="http://angularjs.org/">AngularJS</a></li>
+    </ul>
+{% endif %}
+
+{% if LANGUAGE_CODE  == "en" %}
+    <ul>
+        <li>
+            <a href="http://www.vim.org/">VIM</a>: See me config at GitHub ־ <a href="https://github.com/MeirKriheli/dotvim">dotvim</a>
+        </li>
+        <li><a href="https://www.archlinux.org/">Arch Linux</a></li>
+        <li><a href="http://www.python.org/">Python</a></li>
+        <li><a href="http://golang.org/">Go</a></li>
+        <li><a href="http://www.postgresql.org/">PostgreSQL</a></li>
+        <li><a href="http://www.mongodb.org/">MongoDB</a></li>
+        <li><a href="https://www.djangoproject.com/">Django</a></li>
+        <li><a href="http://www.tornadoweb.org/">Tornado</a></li>
+        <li><a href="http://sphinx-doc.org/">Sphinx</a></li>
+        <li><a href="http://angularjs.org/">AngularJS</a></li>
+    </ul>
+
+{% endif %}
+
 {% endblock %}
