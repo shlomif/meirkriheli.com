@@ -14,7 +14,7 @@ Scratch that
 :excerpt:
     My 8 year daughter is participating in after school activities for
     outstanding students here in Netanya_. When we couldn't open the files she
-    create at home I was preparing for war.
+    created at home I've started rallying the troops.
 
 My 8 year daughter, Tzlil, is participating in after school activities for
 outstanding students here in Netanya_.
@@ -65,7 +65,7 @@ Scratch את זה
 וחיפוש ב-whatsup.org.il אימת זאת: כתבתי בעבר מאמר אודות יישומים הקשורים לילדים:
 "`ילדים זה שמחה`_".
 
-חיפוש זריז במחשב שלה (נו, לא כל כל זריז, yum בכל זאת) הראה ש־Scratch נמצאת במאגרי
+חיפוש זריז במחשב שלה (נו, לא כל כך זריז, yum בכל זאת) הראה ש־Scratch נמצאת במאגרי
 פדורה 19. התוכנה הותקנה והכל חזר למקומו בשלום.
 
 כל הכבוד על השימוש ביישום קוד־פתוח (עם מגבלות מסויימות) שזמין למספר פלטפורמות.
