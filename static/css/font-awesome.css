@@ -46,14 +46,13 @@ a [class*=" icon-"] {
 /* makes the font 33% larger relative to the icon container */
 .icon-large:before {
   vertical-align: middle;
-  font-size: 1.3333333333333333em;
+  font-size: 1.33333333em;
 }
 .btn [class^="icon-"],
 .nav-tabs [class^="icon-"],
 .btn [class*=" icon-"],
 .nav-tabs [class*=" icon-"] {
   /* keeps button heights with and without icons the same */
-
   line-height: .9em;
 }
 li [class^="icon-"],
@@ -65,7 +64,6 @@ li [class*=" icon-"] {
 li .icon-large:before,
 li .icon-large:before {
   /* 1.5 increased font size for icon-large * 1.25 width */
-
   width: 1.875em;
 }
 ul.icons {
@@ -80,7 +78,6 @@ ul.icons li [class*=" icon-"] {
 ul.icons li .icon-large:before,
 ul.icons li .icon-large:before {
   /* 1.5 increased font size for icon-large * 1.25 width */
-
   vertical-align: initial;
 }
 /*  Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
