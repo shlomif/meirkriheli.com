@@ -352,6 +352,15 @@ pre {
   .inner-shadow(8px, 8px, 8px, 0.3);
   white-space: pre; overflow: auto; padding: @gutter/2;}
 
+code {
+  direction: ltr; text-align: left;
+  display: inline-block;
+  border: 1px solid @blue;
+  .rounded(5px);
+  padding: 0 5px;
+  font-size: 0.9em;
+}
+
 html[dir=rtl] {
   #dsq-content ul, #dsq-content li, #dsq-content ol, #dsq-content cite,
   #dsq-content div, #dsq-content table, #dsq-content td, #dsq-content th,
