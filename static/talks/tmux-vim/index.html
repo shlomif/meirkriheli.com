@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>My life with tmux and vim</title>
+
+		<meta name="description" content="My life and workflow with tmux and vim">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>tmux and vim</h1>
+					<h3>My workflow and some favorite plugins</h3>
+					<p>
+						<small><a href="http://meirkriheli.com">Meir Kriheli</a> / <a href="http://twitter.com/mkriheli">@mkriheli</a></small>
+					</p>
+				</section>
+
+        <section>
+            <section>
+                <h1>Workflow</h1>
+                <img src="img/IMG_20141129_123936.jpg" alt="Home setup" />
+            </section>
+            <section>
+                <h2>Home</h2>
+                <ul>
+                  <li>Multiple projects</li>
+                  <li>Multiple languages and databases</li>
+                  <li>Switching between them frequently</li>
+                </ul>
+            </section>
+            <section>
+                <h1>Work</h1>
+                <ul>
+                    <li>Windows machine</li>
+                    <li>Linux virtual machine</li>
+                    <li>Single project</li>
+                </ul>
+            </section>
+        </section>
+
+				<section>
+					<h2>tmux</h2>
+					<p>Terminal multiplexer, like screen only better IMO.</p>
+          <p class="fragment">
+            <a href="http://tmux.svn.sourceforge.net/viewvc/tmux/trunk/FAQ">It's in the FAQ</a>
+          </p>
+				</section>
+
+        <section>
+            <img src="img/tmux-book.jpg" alt="tmux: Productive Mouse-Free Development" style="disply: block; max-height: 50%"/>
+            <p><a href="https://pragprog.com/book/bhtmux/tmux">This book</a> fast tracked me into it.</p>
+        </section>
+
+        <section>
+            <h2>tmuxinator</h2>
+            <img src="img/ill_be_back_terminator.gif" alt="I'll be back" />
+            <p>Manage tmux sessions</p>
+            <p><a href="https://github.com/tmuxinator/tmuxinator">https://github.com/tmuxinator/tmuxinator</a></p>
+            <aside class="notes">
+              <ul>
+                <li>Show some tmuxinator configs</li>
+                <li>Start/switch multiple sessions</li>
+                <li>Using uwsgi for PHP</li>
+              </ul>
+            </aside>
+        </section>
+
+        <section>
+          <h2>tmux.conf customization</h2>
+          <p>
+          <ul>
+            <li><kbd>CTRL+A</kbd> for prefix</li>
+            <li>Vim like movement between panes</li>
+            <li>tmux.conf reloading</li>
+            <li>Status line customization</li>
+          </ul>
+          </p>
+          <p>
+            See <a href="https://gist.github.com/MeirKriheli/4b4b3ac7b75c3ba4bfa3">My config</a>.
+          </p>
+        </section>
+        <section>
+            <h2>Tips</h2>
+            <ul>
+                <li>Shift + Mouse for regular terminal mouse activities</li>
+                <li><kbd>PREFIX+[</kbd> for copy mode/navigation</li>
+                <ul>
+                  <li><kbd>/</kbd>: search</li>
+                  <li><kbd>SPACE</kbd> + movement: select</li>
+                  <li><kbd>ENTER</kbd>: copy/exit</li>
+                </ul>
+                <li><kbd>PREFIX+]</kbd> for paste</li>
+            </ul>
+            <aside class="notes">
+                show selection/search in tmux
+            </aside>
+        </section>
+
+        <section>
+            <h2>vim - Old Faithful</h2>
+            <p><img src="img/512px-Old_Faithfull-pdPhoto.jpg" alt="Old Faithful" style="height:400px"/></p>
+            <small>By Jon Sullivan [Public domain]</small>
+        </section>
+
+        <section>
+            <section>
+                <h1>Learning - the basics</h1>
+                <p>
+                <img src="img/vim_learning.jpg" alt="Editor learning curve">
+                <small><a href="http://www.thejach.com/view/2012/07/vims_learning_curve_is_wrong">http://www.thejach.com/view/2012/07/vims_learning_curve_is_wrong</a></small>
+                </p>
+            </section>
+
+            <section>
+                <p>Don't learn shortcuts or cheat sheets, it's a language</p>
+                </p>
+                <p class="fragment">
+                e.g: <a href="http://benmccormick.org/2014/07/02/learning-vim-in-2014-vim-as-language/">Learning Vim in 2014: Vim as Language</a>
+                </p>
+            </section>
+            <section>
+                <h2>Modes</h2>
+                <p>Be in normal mode as much as possible</p>
+            </section>
+            <section>
+                <h2>Motions</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Key</th>
+                            <th>Motion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><kbd>^</kbd></td>
+                            <td>Beginning of line</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>$</kbd></td>
+                            <td>End of line</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>0</kbd></td>
+                            <td>First column</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+            </section>
+            <section>
+                <h2>Text objects</h2>
+                <p>i = in, a = all (around)</p>
+                <p>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Obj</th>
+                      <th>Text object</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><kbd>iw</kbd></td>
+                      <td>inside word</td>
+                    </tr>
+                    <tr>
+                      <td><kbd>i(</kbd></td>
+                      <td>Inside brackets</td>
+                    </tr>
+                    <tr>
+                      <td><kbd>i"</kbd></td>
+                      <td>Inside quotes</td>
+                    </tr>
+                    <tr>
+                      <td><kbd>ip</kbd></td>
+                      <td>Inside paragraph</td>
+                    </tr>
+                  </tbody>
+                </table>
+                </p>
+                <p>
+                    :h text-objects
+                </p>
+            </section>
+            <section>
+              <h2>More motions</h2>
+              <p>
+                <img src="img/Travelling_Without_Moving.jpg" alt="Travelling Without Moving">
+              </p>
+              <p>
+                Travelling Without Moving, Jamiroquai
+              </p>
+              <aside class="notes">
+                  You can do a lot without arrows/mouse to move around, slicing and dicing text
+              </aside>
+            </section>
+
+            <section>
+              <h2>More motions</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Command</th>
+                            <th>Motion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><kbd>f</kbd> / <kbd>F</kbd></td>
+                            <td>Find char to right/left </td>
+                        </tr>
+                        <tr>
+                            <td><kbd>t</kbd> / <kbd>T</kbd></td>
+                            <td>Till char to right/left</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>;</kbd></td>
+                            <td>Repeat find/till</td>
+                        </tr>
+                        <tr>
+                            <td><kbd>,</kbd></td>
+                            <td>Repeat find/till in opposite direction/till in opposite direction</td>
+                        </tr>
+                        <tr>
+                          <td><kbd>%</kbd></td>
+                          <td>Find match</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>Motions and verbs can be preceded with count.</p>
+            </section>
+
+            <section>
+              <h2>Verbs</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>key</th>
+                    <th>Verb</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><kbd>d</kbd></td>
+                    <td>Delete with motion</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>c</kbd></td>
+                    <td>Change. Delete by motion and switch to insert mode</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>y</kbd></td>
+                    <td>Yank, aka copy, with motion</td>
+                  </tr>
+                  <tr>
+                    <td><kbd>=</kbd></td>
+                    <td>Format/filter</td>
+                  </tr>
+                </tbody>
+              </table>
+            </section>
+
+            <section>
+                <h2>Combinations</h2>
+                <p>
+                  <img src="img/here-comes-the-boom.jpg" alt="Here comes the boom" />
+                </p>
+            </section>
+            <section>
+                <h2>Combinations</h2>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Command</th>
+                      <th>Result</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><kbd>ci(</kbd></td>
+                      <td>Change in ()</td>
+                    </tr>
+                    <tr>
+                      <td><kbd>cit</kbd></td>
+                      <td>Change inside tag</td>
+                    </tr>
+                    <tr>
+                      <td><kbd>c2t,</kbd></td>
+                      <td>Change till 2nd comma</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </section>
+        </section>
+
+         <section>
+           <section>
+             <h2>&hearts;</h2>
+             <table>
+               <thead>
+                 <tr>
+                   <th>Action</th>
+                   <th>Result</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <tr>
+                   <td><kbd>.</kbd></td>
+                   <td>Repeat last change</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>=i{</kbd></td>
+                   <td>Format inside curly brackets<br>(e.g: js, golang}</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>=it</kbd></td>
+                   <td>Format inside tag</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>ci(</kbd></td>
+                   <td>Change inside ()</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>5dd</kbd></td>
+                   <td>Delete 5 lines</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>yat</kbd></td>
+                   <td>Copy all tag</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>%</kbd></td>
+                   <td>Find match</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>gq</kbd>&lt;motion&gt;</td>
+                   <td>Format to text width</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>CTRL-A</kbd>, <kbd>CTRL-X</kbd></td>
+                   <td>Increment/Decrement numbers</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>:set rnu</kbd></td>
+                   <td>Relative numbers</td>
+                 </tr>
+               </tbody>
+             </table>
+             <aside class="notes">
+                 Show how to increment http cache busting version numbers.
+                 Remind that my tmux is using CTRL-A, so what to do ?
+             </aside>
+           </section>
+
+           <section>
+               
+             <h2>&hearts; completions</h2>
+             <table>
+               <thead>
+                 <tr>
+                   <th>Action</th>
+                   <th>Completion</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <tr>
+                   <td><kbd>CTRL-N</kbd></td>
+                   <td>Simple completion from<br>open buffers</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>CTRL-X</kbd> <kbd>CTRL-F</kbd></td>
+                   <td>Filesystem completion</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>CTRL-X</kbd> <kbd>CTRL-O</kbd></td>
+                   <td>Omni completion</td>
+                 </tr>
+               </tbody>
+             </table>
+             <aside class="notes">
+                 Show some omni complete in css files
+             </aside>
+           </section>
+
+           <section>
+               <h2>Dislike</h2>
+               <ul>
+                   <li>Synchronous plugins</li>
+                   <li>Console vim not refreshing when getting back to it.</li>
+               </ul>
+           </section>
+         </section>
+
+         <section>
+            
+           <section>
+               <h2>Bookmarks</h2>
+               <table>
+                 <thead>
+                   <tr>
+                     <th>Action</th>
+                     <th>Result</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td><kbd>m</kbd>&lt;lowercase letter&gt;</td>
+                     <td>Bookmark in current buffer</td>
+                   </tr>
+                   <tr>
+                     <td><kbd>m</kbd>&lt;uppercase letter&gt;</td>
+                     <td>Bookmark Across buffers</td>
+                   </tr>
+                   <tr>
+                     <td><kbd>`</kbd>&lt;letter&gt;</td>
+                     <td>Goto bookmarked letter</td>
+                   </tr>
+                 </tbody>
+               </table>
+               
+           </section>
+
+           <section>
+               <h2>Special bookmarks</h2>
+               <table>
+                 <thead>
+                   <tr>
+                     <th>Bookmark</th>
+                     <th>Meaning</th>
+                   </tr>
+                 </thead>
+                 <tbody>
+                   <tr>
+                     <td><kbd>.</kbd></td>
+                     <td>Move to previous edit</td>
+                   </tr>
+                   <tr>
+                     <td><kbd>,</kbd></td>
+                     <td>Move to cursor position before jump</td>
+                   </tr>
+                 </tbody>
+               </table>
+           </section>
+         </section>
+
+         <section>
+             <h2>Customizations</h2>
+             <table>
+               <thead>
+                 <tr>
+                   <th>binding</th>
+                   <th>Action</th>
+                 </tr>
+               </thead>
+               <tbody>
+                 <tr>
+                   <td><kbd>jj</kbd></td>
+                   <td>&lt;Esc&gt;</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>,</kbd></td>
+                   <td>&lt;Leader&gt;</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>&lt;Leader&gt;v</kbd></td>
+                   <td>Load .vimrc</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>&lt;Leader&gt;V</kbd></td>
+                   <td>Activate changes to .vimrc</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>&lt;F2&gt;</kbd></td>
+                   <td>Close current split (window)</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>&lt;Leader&gt;S</kbd></td>
+                   <td>Remove trailing whitespace</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>&lt;CTRL&gt;hjkl</kbd></td>
+                   <td>Window movement commands</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>&lt;Leader&gt;d</kbd></td>
+                   <td>Delete buffer, keep the split</td>
+                 </tr>
+                 <tr>
+                   <td>
+                     <kbd>-</kbd>, <kbd>+</kbd>
+                   </td>
+                   <td>Resize horizontal splits</td>
+                 </tr>
+                 <tr>
+                   <td>
+                     <kbd>&lt;ALT&gt;&lt;</kbd> <kbd>&lt;ALT&gt;&gt;</kbd>
+                   </td>
+                   <td>Resize vertical splits</td>
+                 </tr>
+                 <tr>
+                   <td><kbd>&lt;F9&gt;</kbd></td>
+                   <td>Toggle logical (RTL) editing</td>
+                 </tr>
+               </tbody>
+             </table>
+
+         </section>
+
+         <section>
+           <section>
+             <h2>Plugins</h2>
+             <h3>Hands on with some of my favorite ones</h3>
+           </section>
+           <section>
+               <h2>Caveat: Synchronous</h2>
+               <p>IMO the worst part of VIM, plugins run synchronously</p>
+               <aside class="notes">
+                  specially when compared to emacs and others.  Problematic
+                  with slow file systems, CPUs, very large files, etc.
+               </aside>
+           </section>
+         </section>
+
+         <section>
+           <section>
+             <h2>Vundle</h2>
+             <h3>plug-in manager</h3>
+             <small>Was with Pathogen before</small>
+             <aside class="notes">
+               Show some actions, like :PluginList, PluginUpdate, etc
+             </aside>
+           </section>
+           <section>
+             <h2>Vundle</h2>
+             <ul>
+                 <li>:PluginInstall</li>
+                 <li>:PluginUpdate</li>
+                 <li>:PluginList</li>
+             </ul>
+           </section>
+         </section>
+
+         <section>
+             <h2>MiniBufExplorer</h2>
+             <p>Buffer explorer</p>
+             <p class="fragment">I prefer splits over tabs</p>
+         </section>
+
+         <section>
+             <h2>fugitive.vim</h2>
+             <p>Git wrapper, simply great</p>
+             <p class="fragment">
+                <a href="http://vimcasts.org/blog/2011/05/the-fugitive-series/">
+               The Fugitive Series
+               </a> at <a href="http://vimcasts.org/">VimCasts</a>
+             </p>
+             <p class="fragment">And vim-lawrencium for mercurial</p>
+             <aside class="notes">
+                Show some git operations: Add, commit, diff, picking hunks,
+                simple completion in commit messages
+             </aside>
+         </section>
+
+         <section>
+             <h2>vim-dispatch</h2>
+             <p>Aasynchronous commands dispatcher</p>
+             <p class="fragment">When inside tmux, opens a split, runs in it and captures the output.</p>
+             <p class="fragment">Fugitive will use it for :Gpush, :Gpull</p>
+             <pre class="fragment"><code>
+                  :Dispatch ./manage.py compilemessages -l he
+                  :Dispatch gulp test
+              </code></pre>
+         </section>
+
+         <section>
+             <h2>surround.vim</h2>
+             <p>all about "surroundings": parentheses, brackets, quotes, XML
+             tags, and more.</p>
+             <p>Easily delete, change and add such surroundings in pairs.</p>
+         </section>
+
+         <section>
+             <h2>ack.vim</h2>
+             <p>Frontend for the ack command</p>
+             <p class="fragment">Custom shortcut: g*</p>
+         </section>
+
+         <section>
+             <h2>Syntastic</h2>
+             <p>
+             Syntax checking hacks for vim
+             </p>
+             <aside class="notes">
+                 Show some syntax checking with python, js, less, etc.
+             </aside>
+         </section>
+
+         <section>
+             <h2>ctrlp.vim</h2>
+             <p>Fuzzy file, buffer, mru, tag, etc finder</p>
+             <p class="fragment">Custom shortcut: gr for CtrlPBufTag</p>
+             <aside class="notes">
+                 Show fuzzy file and tags actions
+             </aside>
+         </section>
+
+         <section>
+             <h2>NERD Tree</h2>
+             <p>Tree expolrer</p>
+             <aside class="notes">
+                 Show menu operations (like add dir, file etc)
+             </aside>
+         </section>
+         <section>
+             <h2>snipMate + snipmate-snippets</h2>
+             <p>TextMate's snippets features in Vim</p>
+             <aside class="notes">
+                 show some completions in html tags, django templates,
+                 javascript, python etc.
+             </aside>
+         </section>
+
+         <section>
+             <h2>auto-pairs</h2>
+             <p>Insert or delete brackets, parens, quotes in pair.</p>
+         </section>
+
+         <section>
+             <h2>MatchIt</h2>
+             <p>Extended % matching for HTML, LaTeX, and many other languages.</p>
+             <p class="fragment">MatchTag, highlight maching tag</p>
+         </section>
+
+         <section>
+             <h2>vim-multiple-cursors</h2>
+             <p>Sublime Text style multiple selections for Vim</p>
+         </section>
+
+         <section>
+             <h2>splitjoin.vim</h2>
+             <p>simplifies the transition between multiline and single-line code</p>
+             <aside class="notes">
+                 some Examples in ~/.vim/bundle/splitjoin.vim/examples/
+             </aside>
+         </section>
+
+         <section>
+             <h2>tcomment_vim</h2>
+             <p>extensible &amp; universal comment vim-plugin that also handles embedded filetypes </p>
+             <p class="fragment"><kbd>gc</kbd>&lt;motion&gt;</p>
+             <p class="fragment">Or visual selection + <kbd>gc</kbd></p>
+         </section>
+
+         <section>
+             <h2>Language specific</h2>
+         </section>
+
+         <section>
+           <section>
+               <h2>Python</h2>
+           </section>
+           <section>
+             <h3>python-mode</h3>
+             <p>PyLint, Rope, Pydoc, breakpoints from box.</p>
+
+             <ul>
+               <li>Support Python version 2.6+ and 3.2+</li>
+               <li>Syntax highlighting</li>
+               <li>Virtualenv support</li>
+               <li>Run python code (<tt>&lt;leader&gt;r</tt>)</li>
+               <li>Add/remove breakpoints (<tt>&lt;leader&gt;b</tt>)</li>
+               <li>Improved Python indentation</li>
+               <li>Python folding</li>
+             </ul>
+           </section>
+           <section>
+             <h3>python-mode</h3>
+             <ul>
+               <li>Python motions and operators (<tt>]]</tt>, <tt>3[[</tt>, <tt>]]M</tt>, <tt>vaC</tt>, <tt>viM</tt>,
+                 <tt>daC</tt>, <tt>ciM</tt>, ...)</li>
+               <li>Code checking  (<a href="https://bitbucket.org/logilab/pylint">pylint</a>, <a href="https://pypi.python.org/pypi/pyflakes">pyflakes</a>, <a href="https://github.com/klen/pylama">pylama</a>, ...) that can be run
+                 simultaneously (<tt>:PymodeLint</tt>)</li>
+               <li>Autofix PEP8 errors (<tt>:PymodeLintAuto</tt>)</li>
+               <li>Search in python documentation (<tt>K</tt>)</li>
+               <li>Code refactoring &lt;rope refactoring library&gt; (<a href="https://pypi.python.org/pypi/rope">rope</a>)</li>
+               <li>Strong code completion (<a href="https://pypi.python.org/pypi/rope">rope</a>)</li>
+               <li>Go to definition (<tt>&lt;C-c&gt;g</tt> for :RopeGotoDefinition)</li>
+               <li>And more, more ...</li>
+             </ul>
+           </section>
+           <section>
+               <h3>jedi-vim</h3>
+               <p>Trying it for python auto completion, navigation, etc</p>
+           </section>
+         </section>
+
+         <section>
+             <h2>po.vim - Gettext support</h2>
+             <p>Also for Django's translations files</p>
+             <table>
+             <tr><td><kbd>\m</kbd> Next untranslated string</td></tr>
+             <tr><td><kbd>\p</kbd> Prev untranslated string</td></tr>
+             <tr><td><kbd>\c</kbd> Copy msgid to msgstr</td></tr>
+             </table>
+         </section>
+
+         <section>
+             <h2>Go - vim-go</h2>
+             <ul>
+                 <li>Completion</li>
+                 <li>gofmt</li>
+                 <li>Go to symbol, definition</li>
+                 <li>Tags support</li>
+             </ul>
+         </section>
+
+         <section>
+             <img src="img/1295895400_skateboard-basketball-headshot.gif" alt="Head hurts" />
+         </section>
+
+         <section>
+             <h2>My vim setup</h2>
+             <p><a href="https://github.com/MeirKriheli/dotvim">https://github.com/MeirKriheli/dotvim</a></p>
+             <p>Learn, use, fork</p>
+         </section>
+
+         <section>
+             <h2>Thanks!</h2>
+             <p>Questions ?</p>
+         </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

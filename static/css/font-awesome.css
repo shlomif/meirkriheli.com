@@ -46,7 +46,7 @@ a [class*=" icon-"] {
 /* makes the font 33% larger relative to the icon container */
 .icon-large:before {
   vertical-align: middle;
-  font-size: 1.33333333em;
+  font-size: 1.33333333;
 }
 .btn [class^="icon-"],
 .nav-tabs [class^="icon-"],
